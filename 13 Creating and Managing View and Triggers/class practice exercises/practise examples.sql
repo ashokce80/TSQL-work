@@ -143,3 +143,31 @@ Where	Emp_ID = 9
 
 Select * from Emp_test
 Select * from Employee_Test_Audit
+
+
+---------CASE expression
+
+Declare @A int = 5, @B int = 10, @C int = 4
+--simple case 
+Select	
+	Case @C
+		when 1 then 'its 1'
+		when 4 then 'its 4'
+		when 5 then 'its 5'
+		else 'non'
+	End
+-- searched case expression
+	--it can run untill it get right value  expression is executed 
+	-- here result from below code is 'its right' not last one  
+	--we can use case for one column only but we can add multiple case expression for other colums too each case exp for each column if we need to use but not one case for all columns because if any line is correct then next line will not be checked in case.
+Select	
+	Case
+		when @C > 4 then '>4'
+		When @C = 5 then 'its 4'
+		When @A = 4 then 'its not right'
+		When @A = 5 then 'its right'
+		When @B = 5 then 'its not right'
+		else 'its non'
+	End
+
+

@@ -27,3 +27,5 @@ GO
 
 Select	*
 From	VW_SaleDetail
+
+
