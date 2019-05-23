@@ -233,7 +233,8 @@ set id = 3
 Alter table test1_audit 
 Add change Varchar(50)
 
-Select	* from test1_audit
+Select	* 
+from test1_audit
 
 GO
 Alter Trigger TG_test1_insert on test1
