@@ -230,19 +230,26 @@ set id = 3
 
 --lets create audit table for test1 for any new inserts
 
-Create table test1_audit (id int)
+Alter table test1_audit 
+Add change Varchar(50)
 
 Select	* from test1_audit
+
 GO
-Create Trigger TG_test1_insert on test1
+Alter Trigger TG_test1_insert on test1
 For Insert
 AS
 	Declare @idTG int
 
 	Select	@idTG = i.id From inserted i
+
 	Insert into test1_audit
-	Values	(@idTG)
+	Values	(@idTG,'this row is added to table')
 	Print	'From inset trigger '
 
+Insert into test1
+Values (10)
 
+Select	* 
+from test1_audit
 
