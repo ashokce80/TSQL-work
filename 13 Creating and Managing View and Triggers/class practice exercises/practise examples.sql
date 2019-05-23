@@ -254,3 +254,69 @@ Values (10)
 Select	* 
 from test1_audit
 
+
+--- create view from emp and dept
+Go
+Alter View VW_EMP_DPT
+AS
+	Select			e.empID, e.empName,e.Salary,d.deptName
+	From			emp e
+	inner join		dept d
+	on				d.deptId = e.deptId
+
+Select			*
+From			emp e
+	
+Select			*
+From			dept d
+
+Select	* From VW_EMP_DPT	
+
+-- now update data in view for emp dpt but it will not be possible as view can only update one table data on one statement 
+--so we have to use trigger on view to insert data into emp and dept tables
+
+
+Insert into VW_EMP_DPT(empID,empName,Salary,deptName)
+Values				 (10,'Treff',1500,'Admin') -- error for 2 table insert
+
+--now create inseted of insert trigger for data insertio to base tables
+
+GO
+Alter Trigger TR_EMPDPT_InsteadOFInsert
+ON				VW_EMP_DPT
+Instead of Insert -- for what we use trigger 
+AS
+Begin	
+		--Select	* From inserted
+		--Print 'the select from trigger'
+		
+		Declare @deptID int
+		Select	@deptID = d.deptId 
+		From	dept d
+		Inner join	inserted i
+		on		i.deptName = d.deptName
+
+		IF(@deptID is null)
+		begin
+			Print'dept name is not valid'
+			Return
+		End
+
+		Insert into emp(empID,empName,Salary,deptId)
+		Select			empID,empName,Salary,@deptID
+		From			inserted
+		Print 'Insted of insert Trigger is executed'
+End
+
+Select			*
+From			emp e
+	
+Select			*
+From			dept d
+
+Select	* From VW_EMP_DPT	
+
+Insert into VW_EMP_DPT(empID,empName,Salary,deptName)
+Values				 (12,'Teff',2500,'BI')
+
+
