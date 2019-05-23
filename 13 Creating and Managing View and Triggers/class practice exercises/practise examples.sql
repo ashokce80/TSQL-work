@@ -199,6 +199,7 @@ Create table test1(id int not null)
 
 Select	* from test1
 
+go
 Create view VW_test1
 As	
 	Select	*
@@ -209,3 +210,39 @@ From	VW_test1
 
 Insert into test1
 Values	(1),(2),(5)
+
+Go
+Alter	Trigger	TG_test1 
+ON				test1
+For Update
+As
+	if UPDATE(id)
+	Begin
+		print'"Update columns is not allowed -- Trigger of table"'
+		Rollback Transaction
+	end
+
+Insert into test1
+Values (7)
+
+update test1
+set id = 3	
+
+--lets create audit table for test1 for any new inserts
+
+Create table test1_audit (id int)
+
+Select	* from test1_audit
+GO
+Create Trigger TG_test1_insert on test1
+For Insert
+AS
+	Declare @idTG int
+
+	Select	@idTG = i.id From inserted i
+	Insert into test1_audit
+	Values	(@idTG)
+	Print	'From inset trigger '
+
+
+
