@@ -170,4 +170,42 @@ Select
 		else 'its non'
 	End
 
+GO
+Create view VW_emp
+as
+	Select	*
+	From	emp
+	Where Salary > 10000
 
+Select	*
+From	VW_emp
+
+Alter table	emp
+add			test varchar(10) not null default'hi'
+
+Select	*
+From	VW_emp -- same old result no new test column is shown
+
+GO
+Alter view VW_emp
+As
+	Select	*
+	From	emp
+
+Select		*
+From		VW_emp
+
+Create table test1(id int not null)
+
+Select	* from test1
+
+Create view VW_test1
+As	
+	Select	*
+	From	test1
+
+Select	*
+From	VW_test1
+
+Insert into test1
+Values	(1),(2),(5)
