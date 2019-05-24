@@ -329,7 +329,7 @@ Select		*
 From		emp4_audit
 
 Go
-Create Trigger	TR_emp4_afterDelete
+Alter Trigger	TR_emp4_afterDelete
 ON				emp4
 After Delete
 AS
@@ -382,6 +382,9 @@ Where	deptId = 2
 
 Select	*
 From	[dbo].[emp4]
+
+Select		*
+From		emp4_audit
 
 
 
