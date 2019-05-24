@@ -318,5 +318,71 @@ Select	* From VW_EMP_DPT
 
 Insert into VW_EMP_DPT(empID,empName,Salary,deptName)
 Values				 (12,'Teff',2500,'BI')
+GO
+-- after delete trigger
+Select	*
+From	[dbo].[emp4]
+
+Create table	emp4_audit(empID int, empName varchar(20), deptID int)
+
+Select		*
+From		emp4_audit
+
+Go
+Create Trigger	TR_emp4_afterDelete
+ON				emp4
+After Delete
+AS
+Begin
+	
+	Select	*
+	From	deleted
+	Print 'From after delete trigger'
+
+	Declare @empID int
+	Declare @empName varchar(20)
+	Declare @deptID int
+
+	Select	*
+	Into	#deletedBackup
+	From	deleted
+
+	While Exists (Select * From	#deletedBackup)
+	begin	
+		Select	top 1 @empID = db.empId
+					  ,@empName = db.empName
+					  ,@deptID = db.deptId 
+		From		  #deletedBackup db
+		order by	  db.empId asc
+
+		Insert into		emp4_audit
+		Values			(@empID,@empName,@deptID)
+
+		delete			#deletedBackup
+		Where			@empID = empId
+	end
+
+	Insert into emp4_audit
+	Select		*
+	From		#deletedBackup
+		
+	Drop table #deletedBackup 
+
+End
+
+Insert into emp4
+Values		(1,'Tom',2)
+			,(3,'Mary',3)
+			,(4,'Mike',2)
+			,(5,'Sam',3)
+			,(6,'Ren',4)
+
+Delete emp4
+Where	deptId = 2
+
+Select	*
+From	[dbo].[emp4]
+
+
 
 
