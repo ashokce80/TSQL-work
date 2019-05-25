@@ -206,15 +206,6 @@ From			Vw_HRresourceTbls
 
 --b. Create a view using 3 Person Tables (Utilize 3 system functions)
 
-Select top 1	*
-From			[AdventureWorks2014].[Person].[Person]
-
-Select top 1	*
-From		[AdventureWorks2014].[Person].[EmailAddress]
-
-Select top 1	*
-From		[AdventureWorks2014].[Person].[BusinessEntityAddress]
-
 GO
 Create View VW_PersonTables
 as 
