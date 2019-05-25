@@ -178,4 +178,65 @@ Select	*
 From	EmpHistory
 
 
----
+--4. Create 5 views – Each view will use 3 tables and have 9 columns with 3 coming from each table.
+--a. Create a view using 3 Human Resources Tables (Utilize the WHERE clause)
+
+Go
+Create View Vw_HRresourceTbls
+AS
+	Select		HRE.BusinessEntityID
+				,HRE.LoginID
+				,SUBSTRING(HRE.LoginID,CHARINDEX('\',HRE.LoginID)+1,LEN(HRE.LoginID)) as LoginName
+				,HRE.JobTitle
+				,HREDH.DepartmentID
+				,HREDH.StartDate
+				,HREDH.EndDate
+				,HRD.[Name]
+				,HRD.GroupName
+				,HRD.ModifiedDate
+	From		[AdventureWorks2014].[HumanResources].[Employee] as HRE
+	Inner join	[AdventureWorks2014].[HumanResources].											[EmployeeDepartmentHistory] as HREDH
+	on			HRE.BusinessEntityID = HREDH.BusinessEntityID
+	Inner join	[AdventureWorks2014].[HumanResources].[Department] as HRD
+	On			HRD.DepartmentID = HREDH.DepartmentID
+GO
+
+Select			*
+From			Vw_HRresourceTbls
+
+--b. Create a view using 3 Person Tables (Utilize 3 system functions)
+
+Select top 1	*
+From			[AdventureWorks2014].[Person].[Person]
+
+Select top 1	*
+From		[AdventureWorks2014].[Person].[EmailAddress]
+
+Select top 1	*
+From		[AdventureWorks2014].[Person].[BusinessEntityAddress]
+
+GO
+Create View VW_PersonTables
+as 
+Select		PEMAIL.BusinessEntityID
+			,PP.PersonType 
+			,PP.Title
+			,CONCAT(PP.FirstName,' ',PP.LastName) as [Full Name]
+			, SUBSTRING(PEMAIL.EmailAddress,CHARINDEX('@',PEMAIL.EmailAddress)+1,LEN(PEMAIL.EmailAddress)) AS DomainName
+			,PEMAIL.ModifiedDate as [Person Email Modified date]
+			,PBusE.AddressID
+			,PBusE.AddressTypeID
+			,PBusE.ModifiedDate as [BusEntity Modified Date]
+From		[AdventureWorks2014].[Person].[Person] as PP
+INNER JOIN	[AdventureWorks2014].[Person].[EmailAddress] AS PEMAIL
+On			PP.BusinessEntityID = PEMAIL.BusinessEntityID
+Inner join	[AdventureWorks2014].[Person].[BusinessEntityAddress] as PBusE
+On			PBusE.BusinessEntityID = PEMAIL.BusinessEntityID
+Go
+
+Select		*
+From		VW_PersonTables
+
+c. Create a view using 3 Production Tables (Utilize the Group By Statement)
+d. Create a view using 3 Purchasing Tables (Utilize the HAVING clause)
+e. Create a view using 3 Sales Tables (Utilize the CASE Statement)
