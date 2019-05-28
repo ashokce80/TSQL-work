@@ -56,7 +56,7 @@ Begin
 End
 
 Insert into Emp_triggers(empName,deptID)
-Values		('Torr',3)
+Values		('Torer',3)
 
 --b. Trigger 2 – Build a tirgger on the emp table after an update of the empname or deptid column - It updates the subsequent empname and/or deptid in the emp_history table.
 
@@ -228,6 +228,64 @@ Go
 Select		*
 From		VW_PersonTables
 
-c. Create a view using 3 Production Tables (Utilize the Group By Statement)
-d. Create a view using 3 Purchasing Tables (Utilize the HAVING clause)
-e. Create a view using 3 Sales Tables (Utilize the CASE Statement)
+--c. Create a view using 3 Production Tables (Utilize the Group By Statement)
+
+Go
+Create	View	VW_ProductTables
+as
+Select			PPro.ProductID, PPro.Name as Product_Name
+				,SUM(ListPrice - StandardCost) as Profit
+				,PPro.DaysToManufacture
+				,PTran.TransactionDate as TansactionDate
+				,PTran.TransactionID, PTran.ActualCost
+				,PProCat.ProductCategoryID
+				,PProCat.Name as Product_Category_Name
+				,PProSubC.Name as [Product Sub-Category]
+From			[AdventureWorks2014].[Production].[Product] as PPro
+Inner join		[AdventureWorks2014].[Production].[TransactionHistory] as PTran
+On				PPro.ProductID = PTran.ProductID
+Inner join		[AdventureWorks2014].[Production].ProductSubcategory as							PProSubC
+On				PProSubC.ProductSubcategoryID = PPro.ProductSubcategoryID
+Inner join		[AdventureWorks2014].[Production].ProductCategory as PProCat
+On				PProCat.ProductCategoryID = PProSubC.ProductCategoryID
+Group	by		PPro.ProductID,PProSubC.Name,PProCat.Name ,  PPro.[Name]
+				,PPro.DaysToManufacture
+				,PTran.TransactionDate 
+				,PTran.TransactionID, PTran.ActualCost
+				,PProCat.ProductCategoryID
+GO
+
+Select			*
+From			VW_ProductTables
+
+
+--d. Create a view using 3 Purchasing Tables (Utilize the HAVING clause)
+
+GO
+Create View VW_ProOrderedMorethen10
+As
+Select			PPOD.OrderQty 
+				,PPOD.ProductID
+				,Count(PPOD.ProductID) as ProductOrdered
+				,PPOD.LineTotal as OrderTotal
+				,PProV.StandardPrice,PProV.AverageLeadTime 
+				,PPurV.BusinessEntityID
+				,PPurV.Name as VendorName ,PPurV.AccountNumber 
+From			[AdventureWorks2014].[Purchasing].[PurchaseOrderDetail] as PPOD
+Inner join		[AdventureWorks2014].[Purchasing].[ProductVendor] as PProV
+ON				PProV.ProductID = PPOD.ProductID
+Inner join		[AdventureWorks2014].[Purchasing].[Vendor] as PPurV
+On				PProV.BusinessEntityID = PPurV.BusinessEntityID	
+Group by		PPOD.OrderQty 
+				,PPOD.ProductID
+				,PPOD.LineTotal 
+				,PProV.StandardPrice,PProV.AverageLeadTime 
+				,PPurV.BusinessEntityID
+				,PPurV.Name ,PPurV.AccountNumber 
+Having			Count(PPOD.ProductID) > 10
+Go
+
+Select			*
+From			VW_ProOrderedMorethen10
+
+--e. Create a view using 3 Sales Tables (Utilize the CASE Statement)

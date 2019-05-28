@@ -361,13 +361,7 @@ Begin
 		delete			#deletedBackup
 		Where			@empID = empId
 	end
-
-	Insert into emp4_audit
-	Select		*
-	From		#deletedBackup
-		
-	Drop table #deletedBackup 
-
+	
 End
 
 Insert into emp4
@@ -378,7 +372,7 @@ Values		(1,'Tom',2)
 			,(6,'Ren',4)
 
 Delete emp4
-Where	deptId = 2
+Where	deptId = 3
 
 Select	*
 From	[dbo].[emp4]
