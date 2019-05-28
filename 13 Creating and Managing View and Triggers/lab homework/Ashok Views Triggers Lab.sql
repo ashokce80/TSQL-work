@@ -289,3 +289,39 @@ Select			*
 From			VW_ProOrderedMorethen10
 
 --e. Create a view using 3 Sales Tables (Utilize the CASE Statement)
+
+Go
+Create View VW_SalesOrderTotalDueRange
+As
+Select			SC.StoreID
+				,SC.TerritoryID
+				,SC.CustomerID
+				,SSoh.OrderDate
+				,SSoh.SalesOrderNumber
+				,SSoh.ShipDate
+				,SSod.OrderQty
+				,SSod.ProductID
+				,SSod.UnitPrice
+				,SSoh.TotalDue
+				,Case 
+					When	 SSoh.TotalDue > 10000 and SSoh.TotalDue < 20000
+							 Then 'TotalDue in between 10k to 20K'
+					When	 SSoh.TotalDue > 20000 and SSoh.TotalDue < 30000 
+							Then 'TotalDue in between 20k to 30K'
+					When	 SSoh.TotalDue > 30000 and SSoh.TotalDue < 40000   
+							Then 'TotalDue in between 30k to 40K'
+					When	 SSoh.TotalDue > 40000 and SSoh.TotalDue < 50000 
+							Then 'TotalDue in between 40k to 50K'
+					When	 SSoh.TotalDue > 50000 
+							Then 'TotalDue > 50K'
+					End as [TotalDue Range]
+From			[AdventureWorks2014].[Sales].[Customer] as SC
+Inner join		[AdventureWorks2014].[Sales].[SalesOrderHeader] as SSoh
+On				SSoh.CustomerID = SC.CustomerID
+Inner join		[AdventureWorks2014].[Sales].[SalesOrderDetail] as SSod
+on				SSod.SalesOrderID = SSoh.SalesOrderID
+Where			SSoh.TotalDue > 25000
+Go		
+
+Select			*
+From			VW_SalesOrderTotalDueRange
