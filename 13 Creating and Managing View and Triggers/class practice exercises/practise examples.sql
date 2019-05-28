@@ -379,7 +379,50 @@ From	[dbo].[emp4]
 
 Select		*
 From		emp4_audit
+-------
 
+Select * from Emp_test ,Employee_Test_Audit -- multiply both table and show records
+
+Select * from Emp_test 
+Select * from Employee_Test_Audit
+
+Begin Tran
+	update	Emp_test
+	Set		Emp_name = 'Troy'
+	Where	Emp_sal = 2710
+Go
+
+Select	*
+From	Emp_test
+
+--Commit 
+Commit
+Go
+--any one Rollback or Commit can be used with Begin Tran So either we update the value and commit and update the value but dont like that change then rollback 
+-- once commit is dont we can not rollback that change
+--rollback the name change
+Rollback
+Go
+Select	*
+From	Emp_test
+Go
+--Commit 
+Commit
+Go
+
+--create view and update view for base table so base table data will get updated
+Go
+Create View VW_empTest
+as 
+	Select	*
+	From	Emp_test
+	
+Select	*
+From	VW_empTest
+
+Update VW_empTest
+Set		Emp_name = 'Reeeuuu'
+Where	Emp_sal = 2710
 
 
 
