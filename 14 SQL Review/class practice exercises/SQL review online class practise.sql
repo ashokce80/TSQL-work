@@ -143,3 +143,8 @@ From		Fn_value(1200)
 
 Select * From [dbo].[Emp_test]
 
+------------------ Null ralted 
+
+Select * 
+From [dbo].[emp]
+where	MgrID <> 5-- And MgrID is not null
