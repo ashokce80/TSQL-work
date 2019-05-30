@@ -8,9 +8,11 @@ SQL review Lab work
 		---Transact Structure Query Language
 
 
---2. What keyword in a SQL query do you use to extract data from a database table?   ---SELECT
+--2. What keyword in a SQL query do you use to extract data from a database table?   
+		---SELECT
 
---3. What keyword in a SQL query do you use to modify data from a database table? ---Update
+--3. What keyword in a SQL query do you use to modify data from a database table? 
+		---Update
 
 
 --4. What keyword in a SQL query do you use to add data from a database table?
@@ -28,7 +30,6 @@ SQL review Lab work
 	--Table is a set of data elements (values) using a model of vertical columns (identifiable by name) and horizontal rows, the cell being the unit where a row and column intersect. 
 	--Table is stored in Database.
 	-- View is virtual table which represent one or more base table's data as per it's creation sql code. It is based on the result-set of an SQL statement. It's SQL query is store as object for fatching data from base tables.
-
 
 --7. What is the difference between a temporary and variable table?
 	--Temporary Table
@@ -135,15 +136,11 @@ Field1		Field2			Field3
 34			1/19/2012		Mars Saturn
 			08:00 AM
 
-
-
 65			 2/15/2012		 Big Bright Sun
 			10:30 AM
 
-
-
-89				3/31/2012		Red Hot Mercury
-				09:15 PM
+89			3/31/2012		Red Hot Mercury
+			09:15 PM
 */
 
 Insert into Table1
@@ -167,8 +164,6 @@ Select	len(Field3) as [F3 charLenght]
 From	Table1
 where	Field1 = 89
 
-
-
 --21. Write a SQL statement for record 65 to return the first occurrence of a space in Field3.
 
 Select	CHARINDEX(' ',Field3) as CharPositionOfSpace
@@ -189,8 +184,6 @@ Where		Field1 = 65
 Select		Left(SUBSTRING(Field3,CHARINDEX(' ',Field3)+1,len(Field3)),CHARINDEX(' ',SUBSTRING(Field3,CHARINDEX(' ',Field3)+1,len(Field3)) ))
 From		Table1
 Where		Field1 = 65
-
-
 
 --23. Write a SQL statement for record 34 to return the day from the Field2.
 
@@ -244,7 +237,6 @@ Truncate table Table1
 --31. Write a SQL statement to remove Table1.
 
 Drop Table Table1
-
 
 --32. Create a sql statement that returns the TerritoryName, SalesPerson (LastName Only), ship method, credit card type (If no credit card, it should say cash), OrderDate and TotalDue for ALL Transactions in the NorthWest Territory.
 
