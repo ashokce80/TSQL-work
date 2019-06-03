@@ -263,4 +263,3 @@ ON				SCC.CreditCardID = SSOH.CreditCardID
 Where			SST.Name = 'NorthWest'
 
 
-
