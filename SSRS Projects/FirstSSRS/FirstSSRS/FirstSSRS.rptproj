@@ -50,6 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Report Include="FirstReport.rdl" />
+    <Report Include="SecoundReport.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
