@@ -52,6 +52,7 @@
     <DataSource Include="AdvantureWorks2014.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="FifthReport.rdl" />
     <Report Include="FirstReport.rdl" />
     <Report Include="FoutrhReport.rdl" />
     <Report Include="SecoundReport.rdl" />
