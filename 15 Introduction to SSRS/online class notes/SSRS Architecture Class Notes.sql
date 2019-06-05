@@ -90,27 +90,25 @@ SELECT			*
 FROM			Person.StateProvince 
 
 
-
-
-
-SELECT			 YEAR(OrderDate) AS OrderYear 
-				,MONTH(OrderDate) AS OrderMonth
-				,TotalDue 
+SELECT			 YEAR(SOH.OrderDate) AS OrderYear 
+				,MONTH(SOH.OrderDate) AS OrderMonth
+				,SOH.TotalDue
 				,[Group] AS TerritoryGroup
 				,ST.Name AS TerritoryName
-				,ISNULL(FirstName +' '+LastName , 'No Rep') AS SalesRep
-				,ISNULL(JobTitle,'No Job Title') AS JobTitle -- this is not required
+				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep') AS SalesRep
+				,ISNULL(VSP.JobTitle,'No Job Title') AS JobTitle -- this is not required
 				,SP.Name AS ShipState
-FROM			Sales.SalesOrderHeader SOH
-LEFT JOIN		Sales.SalesTerritory ST
+FROM			Sales.SalesOrderHeader as SOH
+LEFT JOIN		Sales.SalesTerritory as ST
 ON				SOH.TerritoryID = ST.TerritoryID
-LEFT JOIN		Sales.vSalesPerson VSP
+LEFT JOIN		Sales.vSalesPerson as VSP
 ON				SalesPersonID = BusinessEntityID
-LEFT JOIN		Person.Address PA
+LEFT JOIN		Person.Address as PA
 ON				ShipToAddressID = AddressID
-LEFT JOIN		Person.StateProvince SP
+LEFT JOIN		Person.StateProvince as SP
 ON				SP.StateProvinceID = PA.StateProvinceID
-
+Where			VSP.FirstName is not null 
+OR				VSP.JobTitle is not null
 --------------------OR-------------------------------------------
 
 SELECT			 YEAR(OrderDate) AS OrderYear 

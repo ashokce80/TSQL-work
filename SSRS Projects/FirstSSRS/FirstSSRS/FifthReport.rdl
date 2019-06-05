@@ -531,10 +531,10 @@ OR				VSP.JobTitle is not null</CommandText>
             </Style>
           </Line>
         </ReportItems>
-        <Height>2.90833in</Height>
+        <Height>5.09667in</Height>
         <Style />
       </Body>
-      <Width>10.84167in</Width>
+      <Width>14.905in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
