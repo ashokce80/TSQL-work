@@ -52,7 +52,9 @@
     <DataSource Include="AdventureWorks2014.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="Sales by Territory Group.rdl" />
     <Report Include="Sales by Year.rdl" />
+    <Report Include="Sales trend by Year - Month.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

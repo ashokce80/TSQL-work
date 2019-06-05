@@ -107,6 +107,7 @@ LEFT JOIN		Person.Address as PA
 ON				ShipToAddressID = AddressID
 LEFT JOIN		Person.StateProvince as SP
 ON				SP.StateProvinceID = PA.StateProvinceID
+
 Where			VSP.FirstName is not null 
 OR				VSP.JobTitle is not null
 
@@ -131,3 +132,6 @@ LEFT JOIN		Person.Address PA
 ON				ShipToAddressID = AddressID
 LEFT JOIN		Person.StateProvince SP
 ON				SP.StateProvinceID = PA.StateProvinceID
+
+Select		@@SERVERNAME
+Select		@@DATEFIRST
