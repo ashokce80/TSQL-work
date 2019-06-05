@@ -135,3 +135,20 @@ ON				SP.StateProvinceID = PA.StateProvinceID
 
 Select		@@SERVERNAME
 Select		@@DATEFIRST
+-------------------------- test
+
+--Funnel chart related data in sql query to understand it 
+SELECT	top 10	 SUM(SOH.TotalDue) as SUMOFTOTAL
+				,VSP.FirstName AS SalesRep
+FROM			Sales.SalesOrderHeader as SOH
+LEFT JOIN		Sales.SalesTerritory as ST
+ON				SOH.TerritoryID = ST.TerritoryID
+LEFT JOIN		Sales.vSalesPerson as VSP
+ON				SalesPersonID = BusinessEntityID
+LEFT JOIN		Person.Address as PA
+ON				ShipToAddressID = AddressID
+LEFT JOIN		Person.StateProvince as SP
+ON				SP.StateProvinceID = PA.StateProvinceID
+Where			VSP.FirstName is not null
+Group by		VSP.FirstName
+Order by		SUM(SOH.TotalDue) desc
