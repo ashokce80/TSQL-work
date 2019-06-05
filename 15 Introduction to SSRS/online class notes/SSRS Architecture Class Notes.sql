@@ -109,6 +109,7 @@ LEFT JOIN		Person.StateProvince as SP
 ON				SP.StateProvinceID = PA.StateProvinceID
 Where			VSP.FirstName is not null 
 OR				VSP.JobTitle is not null
+
 --------------------OR-------------------------------------------
 
 SELECT			 YEAR(OrderDate) AS OrderYear 
