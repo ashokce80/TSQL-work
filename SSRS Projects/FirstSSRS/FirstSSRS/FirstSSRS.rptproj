@@ -50,13 +50,14 @@
   </PropertyGroup>
   <ItemGroup>
     <DataSource Include="AdvantureWorks2014.rds" />
+    <DataSource Include="AshokDSrc.rds" />
   </ItemGroup>
   <ItemGroup>
     <Report Include="FifthReport.rdl" />
     <Report Include="FirstReport.rdl" />
     <Report Include="FoutrhReport.rdl" />
     <Report Include="SecoundReport.rdl" />
-    <Report Include="test.rdl" />
+    <Report Include="Table Drilldown totalSubTotal.rdl" />
     <Report Include="ThirdReport.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
