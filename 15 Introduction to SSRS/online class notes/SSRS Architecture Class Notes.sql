@@ -152,3 +152,39 @@ ON				SP.StateProvinceID = PA.StateProvinceID
 Where			VSP.FirstName is not null
 Group by		VSP.FirstName
 Order by		SUM(SOH.TotalDue) desc
+
+--- first drill down related
+
+SELECT			 [Group] AS TerritoryGroup
+				,ST.Name AS TerritoryName
+				,SP.Name AS ShipState
+				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep')  AS SalesRep
+				,YEAR(SOH.OrderDate) AS OrderYear 
+				,MONTH(SOH.OrderDate) AS OrderMonth
+				,SUM(SOH.TotalDue) as TOTALDUE
+				--,ISNULL(VSP.JobTitle,'No Job Title') AS JobTitle -- this is not required
+				
+FROM			Sales.SalesOrderHeader as SOH
+LEFT JOIN		Sales.SalesTerritory as ST
+ON				SOH.TerritoryID = ST.TerritoryID
+LEFT JOIN		Sales.vSalesPerson as VSP
+ON				SalesPersonID = BusinessEntityID
+LEFT JOIN		Person.Address as PA
+ON				ShipToAddressID = AddressID
+LEFT JOIN		Person.StateProvince as SP
+ON				SP.StateProvinceID = PA.StateProvinceID
+Where			 YEAR(SOH.OrderDate) = 2011
+Group by		[Group] 
+				,ST.Name 
+				,SP.Name 
+				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep') 
+				,YEAR(SOH.OrderDate) 
+				,MONTH(SOH.OrderDate)
+				
+				--,ISNULL(VSP.JobTitle,'No Job Title') AS JobTitle -- this is not required
+				
+Order by		[Group] 
+				,ST.Name 
+				,SP.Name
+				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep')
+				  

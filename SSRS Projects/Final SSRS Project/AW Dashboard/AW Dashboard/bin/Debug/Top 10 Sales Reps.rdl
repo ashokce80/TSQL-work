@@ -163,21 +163,6 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
                       <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
-                  <ChartMembers>
-                    <ChartMember>
-                      <Group Name="Chart1_CategoryGroup1">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!JobTitle.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <SortExpressions>
-                        <SortExpression>
-                          <Value>=Fields!JobTitle.Value</Value>
-                        </SortExpression>
-                      </SortExpressions>
-                      <Label>=Fields!JobTitle.Value</Label>
-                    </ChartMember>
-                  </ChartMembers>
                   <Label>=Fields!SalesRep.Value</Label>
                 </ChartMember>
               </ChartMembers>
