@@ -569,7 +569,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!OrderMonth.Value</Value>
+                                    <Value>=MonthName(Fields!OrderMonth.Value)</Value>
                                     <Style>
                                       <FontFamily>Arial</FontFamily>
                                       <FontSize>11pt</FontSize>
@@ -769,7 +769,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
             </TablixRowHierarchy>
             <DataSetName>MainReport</DataSetName>
             <Top>0.4375in</Top>
-            <Left>0.93in</Left>
+            <Left>0.1675in</Left>
             <Height>1.25in</Height>
             <Width>4.09167in</Width>
             <Style>
@@ -785,7 +785,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Sales by Month</Value>
+                    <Value>Sales by Territory</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -797,7 +797,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.0375in</Top>
-            <Left>0.93in</Left>
+            <Left>0.1675in</Left>
             <Height>0.25in</Height>
             <Width>1.505in</Width>
             <ZIndex>1</ZIndex>
@@ -813,9 +813,9 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
           </Textbox>
           <Line Name="Line1">
             <Top>0.31528in</Top>
-            <Left>0.93in</Left>
+            <Left>0.1675in</Left>
             <Height>0in</Height>
-            <Width>1.39667in</Width>
+            <Width>1.505in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -827,7 +827,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
           </Line>
           <Line Name="Line2">
             <Top>0.38472in</Top>
-            <Left>0.93in</Left>
+            <Left>0.1675in</Left>
             <Height>0in</Height>
             <Width>3.94833in</Width>
             <ZIndex>3</ZIndex>
@@ -840,10 +840,10 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
             </Style>
           </Line>
         </ReportItems>
-        <Height>2.02833in</Height>
+        <Height>1.845in</Height>
         <Style />
       </Body>
-      <Width>6.5in</Width>
+      <Width>4.45in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
