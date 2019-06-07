@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="Sales by Month Drilldown.rdl" />
+    <Report Include="Sales by Territory DrillDown.rdl" />
     <Report Include="Sales by Territory Group.rdl" />
     <Report Include="Sales by Territory.rdl" />
     <Report Include="Sales by Year.rdl" />
