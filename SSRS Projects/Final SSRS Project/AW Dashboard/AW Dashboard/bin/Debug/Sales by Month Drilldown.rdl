@@ -501,6 +501,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!OrderYear.Value</Value>
+                      <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
@@ -553,6 +554,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID
                           <SortExpressions>
                             <SortExpression>
                               <Value>=Fields!OrderMonth.Value</Value>
+                              <Direction>Descending</Direction>
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
