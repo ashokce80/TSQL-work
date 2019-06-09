@@ -108,6 +108,7 @@ ON				ShipToAddressID = AddressID
 LEFT JOIN		Person.StateProvince as SP
 ON				SP.StateProvinceID = PA.StateProvinceID
 
+
 Where			VSP.FirstName is not null 
 OR				VSP.JobTitle is not null
 
@@ -187,4 +188,79 @@ Order by		[Group]
 				,ST.Name 
 				,SP.Name
 				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep')
-				  
+				,MONTH(SOH.OrderDate) 
+
+--------------- for multi value select for parameter
+
+
+SELECT			 YEAR(SOH.OrderDate) AS OrderYear 
+				,MONTH(SOH.OrderDate) AS OrderMonth
+				,SOH.TotalDue
+				,[Group] AS TerritoryGroup
+				,ST.Name AS TerritoryName
+				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep') AS SalesRep
+				,ISNULL(VSP.JobTitle,'No Job Title') AS JobTitle -- this is not required
+				,SP.Name AS ShipState
+FROM			Sales.SalesOrderHeader as SOH
+LEFT JOIN		Sales.SalesTerritory as ST
+ON				SOH.TerritoryID = ST.TerritoryID
+LEFT JOIN		Sales.vSalesPerson as VSP
+ON				SalesPersonID = BusinessEntityID
+LEFT JOIN		Person.Address as PA
+ON				ShipToAddressID = AddressID
+LEFT JOIN		Person.StateProvince as SP
+ON				SP.StateProvinceID = PA.StateProvinceID
+Where           ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep') in ('Amy Alberts','David Campbell')
+
+---------- distinct data for parameters
+
+SELECT DISTINCT		YEAR(SOH.OrderDate) AS OrderYear
+				  ,MONTH(SOH.OrderDate) AS OrderMonth 
+				  ,SOH.TotalDue 
+				  ,[Group] AS TerritoryGroup
+				  ,ST.Name AS TerritoryName 
+				  ,ISNULL(VSP.FirstName + ' ' + VSP.LastName, 'No Rep') AS SalesRep
+				  ,ISNULL(VSP.JobTitle, 'No Job Title') AS JobTitle
+				  ,SP.Name AS ShipState
+FROM			  Sales.SalesOrderHeader AS SOH 
+LEFT JOIN         Sales.SalesTerritory AS ST 
+ON		    	  SOH.TerritoryID = ST.TerritoryID 
+LEFT JOIN         Sales.vSalesPerson AS VSP 
+ON				  SalesPersonID = BusinessEntityID 
+LEFT JOIN         Person.Address AS PA 
+ON				  ShipToAddressID = AddressID 
+LEFT JOIN         Person.StateProvince AS SP 
+ON				  SP.StateProvinceID = PA.StateProvinceID
+
+
+--- for yr parameter
+
+SELECT DISTINCT		YEAR(SOH.OrderDate) AS OrderYear
+From				Sales.SalesOrderHeader AS SOH
+Order by				YEAR(SOH.OrderDate) desc
+
+--- t group para
+
+Select Distinct		[Group] AS TerritoryGroup
+From				Sales.SalesTerritory 
+
+----t Name para with cascading
+Select Distinct		ST.Name
+From				Sales.SalesTerritory as ST
+Where				[Group] IN (@TerritoryGroup)
+
+-- sales rep para with cascading
+Select	distinct	ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep') AS SalesRep
+From				Sales.SalesOrderHeader as SOH
+LEFT JOIN            Sales.vSalesPerson AS VSP
+ON				 	VSP.BusinessEntityID = SOH.SalesPersonID
+left join			Sales.SalesTerritory as ST
+ON					ST.TerritoryID = SOH.TerritoryID
+Where				ST.Name IN (@TerritoryName)
+
+
+---- job title para
+Select	distinct		ISNULL(VSP.JobTitle, 'No Job Title') AS JobTitle
+From					Sales.vSalesPerson as VSP
+Where					ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep') IN (@SalesRep)
+--- Ship State
