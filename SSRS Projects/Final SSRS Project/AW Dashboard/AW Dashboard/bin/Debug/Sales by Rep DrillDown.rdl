@@ -284,9 +284,6 @@ Order by   SalesRep</CommandText>
                               <Color>Silver</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=IIf(Sum(Fields!TotalDue.Value) &gt; 75000,"Green",
-	IIF(Sum(Fields!TotalDue.Value) &lt; 75000 and Sum(Fields!TotalDue.Value)&gt; 0 ,"RED",
-		IIF(Sum(Fields!TotalDue.Value) = 75000,"Yellow","LightGrey" )))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -762,7 +759,7 @@ Order by   SalesRep</CommandText>
         <Height>1.7675in</Height>
         <Style />
       </Body>
-      <Width>8.955in</Width>
+      <Width>4.43833in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

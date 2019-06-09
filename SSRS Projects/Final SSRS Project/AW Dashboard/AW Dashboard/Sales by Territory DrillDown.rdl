@@ -510,6 +510,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!OrderYear.Value</Value>
+                      <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>

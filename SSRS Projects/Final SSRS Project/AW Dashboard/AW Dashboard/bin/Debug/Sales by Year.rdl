@@ -10,7 +10,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="MainReportDS">
+    <DataSet Name="MainReport">
       <Query>
         <DataSourceName>AdventureWorks2014</DataSourceName>
         <CommandText>
@@ -30,8 +30,7 @@ ON				SalesPersonID = BusinessEntityID
 LEFT JOIN		Person.Address as PA
 ON				ShipToAddressID = AddressID
 LEFT JOIN		Person.StateProvince as SP
-ON				SP.StateProvinceID = PA.StateProvinceID
-</CommandText>
+ON				SP.StateProvinceID = PA.StateProvinceID</CommandText>
       </Query>
       <Fields>
         <Field Name="OrderYear">
@@ -415,7 +414,7 @@ ON				SP.StateProvinceID = PA.StateProvinceID
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>MainReportDS</DataSetName>
+            <DataSetName>MainReport</DataSetName>
             <Top>0.44389in</Top>
             <Left>0.15833in</Left>
             <Height>2.2in</Height>

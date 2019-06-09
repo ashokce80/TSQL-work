@@ -10,7 +10,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="MainReportDS">
+    <DataSet Name="MainReport">
       <Query>
         <DataSourceName>AdventureWorks2014</DataSourceName>
         <QueryParameters>
@@ -554,7 +554,7 @@ Where    ST.Name in (@TerritoryName)</CommandText>
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>MainReportDS</DataSetName>
+            <DataSetName>MainReport</DataSetName>
             <Top>0.44389in</Top>
             <Left>0.15833in</Left>
             <Height>2.2in</Height>
@@ -755,7 +755,7 @@ Where    ST.Name in (@TerritoryName)</CommandText>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfRows>3</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -768,23 +768,23 @@ Where    ST.Name in (@TerritoryName)</CommandText>
           <ParameterName>TerritoryGroup</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>TerritoryName</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>SalesRep</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>JobTitle</ParameterName>
+          <ParameterName>TerritoryName</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
+          <ParameterName>SalesRep</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>JobTitle</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>2</RowIndex>
           <ParameterName>ShipState</ParameterName>
         </CellDefinition>
       </CellDefinitions>

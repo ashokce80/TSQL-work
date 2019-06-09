@@ -53,6 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="1 Sales by Year FULL.rdl" />
+    <Report Include="2 Sales trend by Year - Month FULL.rdl" />
+    <Report Include="3 Sales by Territory Group FULL.rdl" />
+    <Report Include="4 Sales by Territory FULL.rdl" />
+    <Report Include="5 US Sales by State FULL.rdl" />
+    <Report Include="6 Top 10 Sales Reps FULL.rdl" />
+    <Report Include="7 Sales by Month Drilldown FULL.rdl" />
+    <Report Include="8 Sales by Territory DrillDown FULL.rdl" />
+    <Report Include="9 Sales by Rep DrillDown FULL.rdl" />
     <Report Include="Sales by Month Drilldown.rdl" />
     <Report Include="Sales by Rep DrillDown.rdl" />
     <Report Include="Sales by Territory DrillDown.rdl" />
