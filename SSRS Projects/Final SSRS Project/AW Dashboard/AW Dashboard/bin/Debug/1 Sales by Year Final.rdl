@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="AdventureWorks2014">
+      <DataSourceReference>AdventureWorks2014</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>61b18700-187f-43fa-a06b-adbf31bd3234</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="MainReport">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@Year">
+            <Value>=Parameters!Year.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@TerritoryGroup">
+            <Value>=Parameters!TerritoryGroup.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@TerritoryName">
+            <Value>=Parameters!TerritoryName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SalesRep">
+            <Value>=Parameters!SalesRep.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@JobTitle">
+            <Value>=Parameters!JobTitle.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ShipState">
+            <Value>=Parameters!ShipState.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+SELECT			 YEAR(SOH.OrderDate) AS OrderYear 
+				,MONTH(SOH.OrderDate) AS OrderMonth
+				,SOH.TotalDue
+				,[Group] AS TerritoryGroup
+				,ST.Name AS TerritoryName
+				,ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep') AS SalesRep
+				,ISNULL(VSP.JobTitle,'No Job Title') AS JobTitle -- this is not required
+				,SP.Name AS ShipState
+FROM			Sales.SalesOrderHeader as SOH
+LEFT JOIN		Sales.SalesTerritory as ST
+ON				SOH.TerritoryID = ST.TerritoryID
+LEFT JOIN		Sales.vSalesPerson as VSP
+ON				SalesPersonID = BusinessEntityID
+LEFT JOIN		Person.Address as PA
+ON				ShipToAddressID = AddressID
+LEFT JOIN		Person.StateProvince as SP
+ON				SP.StateProvinceID = PA.StateProvinceID
+Where                               YEAR(SOH.OrderDate) IN (@Year)     
+AND        [Group] in (@TerritoryGroup)
+AND        ST.Name in (@TerritoryName)
+AND        ISNULL(VSP.FirstName +' '+VSP.LastName , 'No Rep')  IN (@SalesRep)
+AND        ISNULL(VSP.JobTitle, 'No Job Title')  IN (@JobTitle)
+AND        SP.Name  IN (@ShipState)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OrderYear">
+          <DataField>OrderYear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrderMonth">
+          <DataField>OrderMonth</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TotalDue">
+          <DataField>TotalDue</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TerritoryGroup">
+          <DataField>TerritoryGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TerritoryName">
+          <DataField>TerritoryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SalesRep">
+          <DataField>SalesRep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobTitle">
+          <DataField>JobTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShipState">
+          <DataField>ShipState</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Year_PAR">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <CommandText>
+SELECT DISTINCT		YEAR(SOH.OrderDate) AS OrderYear
+From				Sales.SalesOrderHeader AS SOH
+Order by  YEAR(SOH.OrderDate)  desc</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="OrderYear">
+          <DataField>OrderYear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="TerritoryGroup_PAR">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <CommandText>SELECT DISTINCT [Group] AS TerritoryGroup
+FROM     Sales.SalesTerritory</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="TerritoryGroup">
+          <DataField>TerritoryGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="TerritoryName_PAR">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@TerritoryGroup">
+            <Value>=Parameters!TerritoryGroup.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>Select Distinct		ST.Name
+From				Sales.SalesTerritory as ST
+Where				[Group] IN (@TerritoryGroup)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="SalesRep_para">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@TerritoryName">
+            <Value>=Parameters!TerritoryName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>Select	distinct	ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep') AS SalesRep
+From				Sales.SalesOrderHeader as SOH
+LEFT JOIN            Sales.vSalesPerson AS VSP
+ON				 	VSP.BusinessEntityID = SOH.SalesPersonID
+left join			Sales.SalesTerritory as ST
+ON					ST.TerritoryID = SOH.TerritoryID
+Where				ST.Name IN (@TerritoryName)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="SalesRep">
+          <DataField>SalesRep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="JobTitle_para">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SalesRep">
+            <Value>=Parameters!SalesRep.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>Select	Distinct		ISNULL(VSP.JobTitle, 'No Job Title') AS JobTitle
+From					Sales.SalesOrderHeader as SOH
+LEFT JOIN		         Sales.vSalesPerson AS VSP
+ON					 	VSP.BusinessEntityID = SOH.SalesPersonID
+Where					ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep') IN (@SalesRep)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="JobTitle">
+          <DataField>JobTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ShipState_Para">
+      <Query>
+        <DataSourceName>AdventureWorks2014</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@TerritoryName">
+            <Value>=Parameters!TerritoryName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>Select		 Distinct SP.Name As ShipState
+From				Sales.SalesOrderHeader as SOH
+left join			Person.StateProvince AS SP
+ON					SOH.TerritoryID = SP.TerritoryID
+Left join			Sales.SalesTerritory as ST
+ON					SOH.TerritoryID = ST.TerritoryID
+Where    ST.Name in (@TerritoryName)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ShipState">
+          <DataField>ShipState</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Subreport Name="Sales_by_Year_1">
+            <ReportName>1 Sales by Year FULL</ReportName>
+            <Parameters>
+              <Parameter Name="Year">
+                <Value>=Parameters!Year.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryGroup">
+                <Value>=Parameters!TerritoryGroup.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryName">
+                <Value>=Parameters!TerritoryName.Value</Value>
+              </Parameter>
+              <Parameter Name="SalesRep">
+                <Value>=Parameters!SalesRep.Value</Value>
+              </Parameter>
+              <Parameter Name="JobTitle">
+                <Value>=Parameters!JobTitle.Value</Value>
+              </Parameter>
+              <Parameter Name="ShipState">
+                <Value>=Parameters!ShipState.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>0.44167in</Top>
+            <Height>1.89722in</Height>
+            <Width>2.28333in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Adventure Works Sales Dashboard</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Olive</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.07167in</Top>
+            <Left>0.03833in</Left>
+            <Height>0.25in</Height>
+            <Width>2.93333in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Subreport Name="Sales_trend_by_Year_Month_FULL_2">
+            <ReportName>2 Sales trend by Year - Month FULL</ReportName>
+            <Parameters>
+              <Parameter Name="Year">
+                <Value>=Parameters!Year.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryGroup">
+                <Value>=Parameters!TerritoryGroup.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryName">
+                <Value>=Parameters!TerritoryName.Value</Value>
+              </Parameter>
+              <Parameter Name="SalesRep">
+                <Value>=Parameters!SalesRep.Value</Value>
+              </Parameter>
+              <Parameter Name="JobTitle">
+                <Value>=Parameters!JobTitle.Value</Value>
+              </Parameter>
+              <Parameter Name="ShipState">
+                <Value>=Parameters!ShipState.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>0.44167in</Top>
+            <Left>2.47333in</Left>
+            <Height>1.89722in</Height>
+            <Width>2.28333in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Sales_by_Territory_Group_FULL_3">
+            <ReportName>3 Sales by Territory Group FULL</ReportName>
+            <Parameters>
+              <Parameter Name="Year">
+                <Value>=Parameters!Year.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryGroup">
+                <Value>=Parameters!TerritoryGroup.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryName">
+                <Value>=Parameters!TerritoryName.Value</Value>
+              </Parameter>
+              <Parameter Name="SalesRep">
+                <Value>=Parameters!SalesRep.Value</Value>
+              </Parameter>
+              <Parameter Name="JobTitle">
+                <Value>=Parameters!JobTitle.Value</Value>
+              </Parameter>
+              <Parameter Name="ShipState">
+                <Value>=Parameters!ShipState.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>2.54972in</Top>
+            <Left>0.02334in</Left>
+            <Height>1.89722in</Height>
+            <Width>2.28333in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Sales_by_Territory_FULL_4">
+            <ReportName>4 Sales by Territory FULL</ReportName>
+            <Parameters>
+              <Parameter Name="Year">
+                <Value>=Parameters!Year.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryGroup">
+                <Value>=Parameters!TerritoryGroup.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryName">
+                <Value>=Parameters!TerritoryName.Value</Value>
+              </Parameter>
+              <Parameter Name="SalesRep">
+                <Value>=Parameters!SalesRep.Value</Value>
+              </Parameter>
+              <Parameter Name="JobTitle">
+                <Value>=Parameters!JobTitle.Value</Value>
+              </Parameter>
+              <Parameter Name="ShipState">
+                <Value>=Parameters!ShipState.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>2.54972in</Top>
+            <Left>2.50111in</Left>
+            <Height>1.89722in</Height>
+            <Width>2.28333in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="US_Sales_by_State_FULL_5">
+            <ReportName>5 US Sales by State FULL</ReportName>
+            <Parameters>
+              <Parameter Name="Year">
+                <Value>=Parameters!Year.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryGroup">
+                <Value>=Parameters!TerritoryGroup.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryName">
+                <Value>=Parameters!TerritoryName.Value</Value>
+              </Parameter>
+              <Parameter Name="SalesRep">
+                <Value>=Parameters!SalesRep.Value</Value>
+              </Parameter>
+              <Parameter Name="JobTitle">
+                <Value>=Parameters!JobTitle.Value</Value>
+              </Parameter>
+              <Parameter Name="ShipState">
+                <Value>=Parameters!ShipState.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>4.64986in</Top>
+            <Height>1.89722in</Height>
+            <Width>2.28333in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Top_10_Sales_Reps_FULL_6">
+            <ReportName>6 Top 10 Sales Reps FULL</ReportName>
+            <Parameters>
+              <Parameter Name="Year">
+                <Value>=Parameters!Year.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryGroup">
+                <Value>=Parameters!TerritoryGroup.Value</Value>
+              </Parameter>
+              <Parameter Name="TerritoryName">
+                <Value>=Parameters!TerritoryName.Value</Value>
+              </Parameter>
+              <Parameter Name="SalesRep">
+                <Value>=Parameters!SalesRep.Value</Value>
+              </Parameter>
+              <Parameter Name="JobTitle">
+                <Value>=Parameters!JobTitle.Value</Value>
+              </Parameter>
+              <Parameter Name="ShipState">
+                <Value>=Parameters!ShipState.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>4.64986in</Top>
+            <Left>2.47333in</Left>
+            <Height>1.89722in</Height>
+            <Width>2.28333in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+        </ReportItems>
+        <Height>6.67208in</Height>
+        <Style />
+      </Body>
+      <Width>5.08in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Year">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>Year_PAR</DataSetName>
+          <ValueField>OrderYear</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Year_PAR</DataSetName>
+          <ValueField>OrderYear</ValueField>
+          <LabelField>OrderYear</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="TerritoryGroup">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>TerritoryGroup_PAR</DataSetName>
+          <ValueField>TerritoryGroup</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Territory Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>TerritoryGroup_PAR</DataSetName>
+          <ValueField>TerritoryGroup</ValueField>
+          <LabelField>TerritoryGroup</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="TerritoryName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>TerritoryName_PAR</DataSetName>
+          <ValueField>Name</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Territory Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>TerritoryName_PAR</DataSetName>
+          <ValueField>Name</ValueField>
+          <LabelField>Name</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SalesRep">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>SalesRep_para</DataSetName>
+          <ValueField>SalesRep</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Sales Rep Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>SalesRep_para</DataSetName>
+          <ValueField>SalesRep</ValueField>
+          <LabelField>SalesRep</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="JobTitle">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>JobTitle_para</DataSetName>
+          <ValueField>JobTitle</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Job Title</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>JobTitle_para</DataSetName>
+          <ValueField>JobTitle</ValueField>
+          <LabelField>JobTitle</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="ShipState">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>ShipState_Para</DataSetName>
+          <ValueField>ShipState</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Ship State</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ShipState_Para</DataSetName>
+          <ValueField>ShipState</ValueField>
+          <LabelField>ShipState</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>3</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>Year</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>TerritoryGroup</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>TerritoryName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>SalesRep</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>JobTitle</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>ShipState</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>88fd69f9-59c4-4d55-a327-5c6642b656c4</rd:ReportID>
+</Report>
