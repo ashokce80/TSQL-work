@@ -254,6 +254,20 @@ Where    ST.Name in (@TerritoryName)</CommandText>
                         <ToolTip>c</ToolTip>
                       </ChartDataLabel>
                       <ToolTip>=Format(Sum(Fields!TotalDue.Value),"$#,###")</ToolTip>
+                      <ActionInfo>
+                        <Actions>
+                          <Action>
+                            <Drillthrough>
+                              <ReportName>7 Sales by Month Drilldown FULL</ReportName>
+                              <Parameters>
+                                <Parameter Name="Year">
+                                  <Value>=Fields!OrderYear.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                            </Drillthrough>
+                          </Action>
+                        </Actions>
+                      </ActionInfo>
                       <Style />
                       <ChartMarker>
                         <Style />
