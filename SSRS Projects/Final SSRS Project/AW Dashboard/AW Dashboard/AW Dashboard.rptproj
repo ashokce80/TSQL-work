@@ -62,15 +62,6 @@
     <Report Include="7 Sales by Month Drilldown FULL.rdl" />
     <Report Include="8 Sales by Territory DrillDown FULL.rdl" />
     <Report Include="9 Sales by Rep DrillDown FULL.rdl" />
-    <Report Include="Sales by Month Drilldown.rdl" />
-    <Report Include="Sales by Rep DrillDown.rdl" />
-    <Report Include="Sales by Territory DrillDown.rdl" />
-    <Report Include="Sales by Territory Group.rdl" />
-    <Report Include="Sales by Territory.rdl" />
-    <Report Include="Sales by Year.rdl" />
-    <Report Include="Sales trend by Year - Month.rdl" />
-    <Report Include="Top 10 Sales Reps.rdl" />
-    <Report Include="US Sales by State.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
