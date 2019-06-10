@@ -52,6 +52,7 @@
     <DataSource Include="AdventureWorks2014.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="1 Sales by Year Final.rdl" />
     <Report Include="1 Sales by Year FULL.rdl" />
     <Report Include="2 Sales trend by Year - Month FULL.rdl" />
     <Report Include="3 Sales by Territory Group FULL.rdl" />

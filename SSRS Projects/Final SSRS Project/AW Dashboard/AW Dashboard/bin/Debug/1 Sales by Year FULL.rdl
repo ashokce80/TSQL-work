@@ -558,7 +558,7 @@ Where    ST.Name in (@TerritoryName)</CommandText>
             <Top>0.44389in</Top>
             <Left>0.15833in</Left>
             <Height>2.2in</Height>
-            <Width>3in</Width>
+            <Width>3.59167in</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -618,7 +618,7 @@ Where    ST.Name in (@TerritoryName)</CommandText>
             <Top>0.37444in</Top>
             <Left>0.15833in</Left>
             <Height>0in</Height>
-            <Width>3in</Width>
+            <Width>3.59167in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -629,10 +629,10 @@ Where    ST.Name in (@TerritoryName)</CommandText>
             </Style>
           </Line>
         </ReportItems>
-        <Height>2.72166in</Height>
+        <Height>2.87166in</Height>
         <Style />
       </Body>
-      <Width>3.23834in</Width>
+      <Width>3.84667in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

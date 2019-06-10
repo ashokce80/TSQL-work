@@ -260,7 +260,68 @@ Where				ST.Name IN (@TerritoryName)
 
 
 ---- job title para
-Select	distinct		ISNULL(VSP.JobTitle, 'No Job Title') AS JobTitle
-From					Sales.vSalesPerson as VSP
+
+Select	Distinct		ISNULL(VSP.JobTitle, 'No Job Title') AS JobTitle
+From					Sales.SalesOrderHeader as SOH
+LEFT JOIN		         Sales.vSalesPerson AS VSP
+ON					 	VSP.BusinessEntityID = SOH.SalesPersonID
 Where					ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep') IN (@SalesRep)
+
 --- Ship State
+
+Select	top 1 *--Distinct		SP.Name AS ShipState
+From					Person.StateProvince AS SP 
+
+Select			top 1	  *
+From					Sales.vSalesPerson AS VSP
+
+
+Select			top 1	  *
+From					Sales.SalesTerritory as ST
+-----tid
+
+Select		 Distinct SP.Name --SalesOrderID, SalesPersonID, ST.TerritoryID, ST.Name, SP.Name, FirstName --* -- AS ShipState  ---------------------------------------
+From				Sales.SalesOrderHeader as SOH
+left join			Person.StateProvince AS SP
+ON					SOH.TerritoryID = SP.TerritoryID
+Left join			Sales.SalesTerritory as ST
+ON					SOH.TerritoryID = ST.TerritoryID
+Where				ST.Name = 'Northwest'
+
+
+Left Join			Sales.vSalesPerson AS VSP
+ON					SOH.SalesPersonID = VSP.BusinessEntityID
+Where				VSP.FirstName = 'Linda' 
+AND 				ST.Name = 'Northwest'
+
+
+
+
+----benid salepid
+
+Select		distinct			*
+From					Sales.SalesOrderHeader as SOH
+Left Join				Sales.vSalesPerson AS VSP
+ON						SOH.SalesPersonID = VSP.BusinessEntityID
+Where					FirstName = 'Linda'
+
+
+
+
+Select			distinct		SP.Name AS ShipState,ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep')
+From					Sales.SalesOrderHeader as SOH
+-----tid
+left join				Person.StateProvince AS SP 
+ON						SOH.TerritoryID = SP.TerritoryID
+----benid salepid
+Left join				Sales.SalesTerritory as ST
+On						ST.TerritoryID = SOH.TerritoryID
+Left join				Sales.vSalesPerson AS VSP
+ON						VSP.BusinessEntityID = SOH.SalesPersonID
+Where					--ST.Name = 'NorthWest' --IN (@TerritoryName)
+						ISNULL(VSP.FirstName +' ' + VSP.LastName,'No Rep') ='Linda Mitchell' -- IN									(@SalesRep)
+
+
+
+Select	Distinct                        SP.Name AS ShipState
+From			    Person.StateProvince AS SP 
