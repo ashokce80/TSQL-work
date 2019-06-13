@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="TXT_to_SQL_table"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{9A9417D6-DA30-43E8-92C4-4755B42A704D}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{E4FFE61D-17D4-4B7B-B79F-906517D59D8A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
