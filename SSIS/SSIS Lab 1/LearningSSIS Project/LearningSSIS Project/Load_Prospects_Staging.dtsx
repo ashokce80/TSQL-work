@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{DBD99E80-4D49-4B8B-802C-514F9ADEF861}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6B57929F-8023-4714-B8FA-A102A8289508}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

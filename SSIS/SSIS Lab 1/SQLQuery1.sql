@@ -17,7 +17,7 @@ Select		*
 From		tblEmp
 
 Create Database Prospects
-
+USe Prospects
 Create table tbl_stg_Prospects 
 (	Name varchar(250),
 	Title varchar(250)
