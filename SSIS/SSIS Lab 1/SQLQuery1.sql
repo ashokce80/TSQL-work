@@ -27,3 +27,5 @@ Create table tbl_stg_Prospects
 
 Select	*
 From	tbl_stg_Prospects 
+
+Truncate Table	tbl_stg_Prospects	
