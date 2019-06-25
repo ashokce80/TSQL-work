@@ -60,8 +60,7 @@ Add				FirstName varchar(250),
 				City varchar(250), 
 				[State] varchar(250);
 
-				
-				
+						
 
 Truncate table tbl_stg_Prospects 
 
@@ -71,8 +70,7 @@ From	tbl_stg_Prospects
 
 --For OLE DB Command Transformation  to update the existing dat with new one in table SSIS
 Update tbl_stg_Prospects
-set		Name = ?,
-		Title = ?,
+set		Title = ?,
 		Company = ?,
 		Location = ?,
 		FirstName = ?,
@@ -82,3 +80,51 @@ set		Name = ?,
 		City = ?,
 		State = ?
 Where	Name = ?
+
+Select	*
+From 	tbl_stg_Prospects 
+Where name ='Erpot, Treff'
+
+Select	*
+From 	tbl_stg_Prospects --13768 rows
+
+Select	*
+From 	tbl_stg_Prospects -- not null 13244
+Where	Name is not null 
+And		Name != ''
+And		Title is not null
+and		Company is not null
+and		Location is not null
+
+Select	*
+From 	tbl_stg_Prospects  -- null 524
+Where	Name is  null 
+or		Name = ''
+or		Title is  null
+or		Company is  null
+or		Location is  null
+
+
+Create table tbl_stg_Prospects_Null_DATA
+(	Name varchar(255),
+	Title varchar(255)
+	,Company varchar(255)
+	,Location varchar(255)
+	)
+
+Select	Name, count(Title)
+From 	tbl_stg_Prospects
+Group by name
+having	Count(title) >1
+
+Select	*
+From 	tbl_stg_Prospects
+Where	name = 'Brown, Kevin'
+
+Select	*
+From 	[dbo].[tbl_stg_Prospects_Null_DATA]
+
+Truncate table tbl_stg_Prospects
+
+Truncate table [dbo].[tbl_stg_Prospects_Null_DATA]
+
