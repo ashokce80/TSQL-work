@@ -26,13 +26,14 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-PF3DBQTQ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqwqMI644D0iYvDpNf2qT7QAAAAACAAAAAAAQZgAAAAEAACAAAAA8r/PQ3IqLNyiulVBvWzsk8+7o6FW4txWnZmJlJUGMPAAAAAAOgAAAAAIAACAAAADbG+yddZ1qiV9fs938hdYj8FpDTX6nBJnrFr/TX5JF/JAAAABMmo9Kk6cEFi2HLWx7merfzzUWnjlcdQ9ROZh/vK6M6ou+4ZYKfHdLlclundoSXx7RTL0oRUHN1rVzrj0yh64Kp6FiUqCU/bmjD2cVeuoKIUYHl8iNKArfroEAV4whUCrUebK3op3OvHY1R8I0S/OmcacfDjdPmYktIiYklNcEZxtntzxNAWPiwWLyryOhawVAAAAA/KRJt7k9B/WADLmqokKVrGhJ5g3AwEQTRr1phdgeBX3769Efw9+duujpxVtavsleskSUrlxbCg3ctS3JrtUvKw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqwqMI644D0iYvDpNf2qT7QAAAAACAAAAAAAQZgAAAAEAACAAAACdGrnkunJGlQtJDzFlfKbSzltxeY0yoDdIK+NazCMFzgAAAAAOgAAAAAIAACAAAADGIrWX0uQjS/JDg3cQfB+lCHYvuej1s9tXQiVreT60bJAAAAAy9S+dK/q13zXhj/Lpaxt6dSCc/UrP3kbJiuvDkC73tzYweqEIYkFm1kSORGi7S3L4WgWlkMWZwhWmTDfvmbQTIbPRJYyQZ2wCnew96WIADKOrrv3WTvdnDw6u5aogVeuX67OBSItlsdSL0YSAO8CxBhcSONgtLLdC+BZV60LRClOiKHHL0xPAo2rQrEzfSGxAAAAAAWW2PArwPT1L7ytrlApVJrpwvkyAGfeStocHJiLq9+KX7+D4zLuku4ofNLU6HuXdj/a4kKG1cBJYJ+HH1ch/Gw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="TXT_to_SQL_table.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SQLTABLE_TO_SQLTABLE.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Load_Prospects_Staging.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Extra tasks.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -526,10 +527,10 @@
                 <SSIS:Property SSIS:Name="Name">Load_Prospects_Staging</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B13F47F9-2F0D-41AA-873B-6F5082FB98E8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A3302BC2-A848-44FC-B5DB-5E1180B5926B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -727,6 +728,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Extra tasks.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{C3B3B111-20CB-4DB2-A7F9-16716321445A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Extra tasks</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0AE9D00C-3D7E-42CF-B308-7CA3D8EC5747}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

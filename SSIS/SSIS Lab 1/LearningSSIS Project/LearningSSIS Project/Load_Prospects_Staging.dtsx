@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{B13F47F9-2F0D-41AA-873B-6F5082FB98E8}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{C86552AF-A83D-48E8-81C2-26FCF7E25FCE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -569,6 +569,36 @@
                           dataType="str"
                           length="250"
                           name="Location" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="FirstName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="LastName" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dept]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Dept" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -617,8 +647,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{CA1C2554-99EF-4E90-971C-874C276328C4}"
-          DTS:ObjectName="{CA1C2554-99EF-4E90-971C-874C276328C4}"
+          DTS:DTSID="{FF86E657-7986-474A-87B3-F41038DC3072}"
+          DTS:ObjectName="{FF86E657-7986-474A-87B3-F41038DC3072}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::File_Path" />
       </DTS:ForEachVariableMappings>
@@ -657,13 +687,13 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="204.8,101.6"
-          Size="204.8,144.8"
+          PanelSize="214.4,101.6"
+          Size="214.4,144.8"
           Id="Package\Foreach Loop Container"
           TopLeft="186.285717458141,145.600002041985" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="287.2285747567,77.6941181532652">
+          TopLeft="289.6285747567,77.6941181532652">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
