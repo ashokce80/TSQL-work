@@ -82,3 +82,39 @@ Create table	tbl_dic_Department(
 				)
 Alter table		tbl_dic_Department
 Add	Default		(getDate()) for CreateDate
+
+
+Select	*
+From	[dbo].[tbl_stg_Prospects]
+
+Select	*
+From	[dbo].[tbl_dic_Company]
+Where		 CompanyName = 'Mayo Clinic'
+
+Truncate table [dbo].[tbl_dic_Company]
+
+Update		 [dbo].[tbl_dic_Company]
+set			 Active = 'Yes', UpdateDate = getDate()
+Where		 CompanyName = 'Mayo Clinic'
+
+Select		*
+From		[dbo].[tbl_dic_Department]
+DepartmentID		Active	CreateDate	UpdateDate
+
+Update		 [dbo].[tbl_dic_Department]
+set			 Active = ?, UpdateDate = getdate()
+Where		 DepartmentName = ?
+
+Select	*
+From	[dbo].[tbl_dic_Company]
+
+select * 
+from [dbo].[tbl_dic_Department]
+
+Select	*
+From	[dbo].[tbl_dic_Location]
+
+Select	*
+From	[dbo].[tbl_dic_Title]
+
+TitleID	TitleName	Active	CreateDate	UpdateDate

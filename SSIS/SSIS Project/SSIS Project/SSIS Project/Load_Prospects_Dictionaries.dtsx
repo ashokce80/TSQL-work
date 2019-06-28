@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Dictionaries"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{5BA9B4F1-AFE8-4E37-A353-5D61E4AEB770}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{25DDB84A-91A2-4F1A-84B1-FEF616DCE164}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2408,12 +2408,12 @@ Where		 LocationCity = ? And LocationState = ?</property>
                       cachedName="Active"
                       lineageId="Package\Data Flow dic-Title\Derived Column.Outputs[Derived Column Output].Columns[Active]" />
                     <inputColumn
-                      refId="Package\Data Flow dic-Title\Data Conversion.Inputs[Data Conversion Input].Columns[DepartmentName]"
+                      refId="Package\Data Flow dic-Title\Data Conversion.Inputs[Data Conversion Input].Columns[Title]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
-                      cachedName="DepartmentName"
-                      lineageId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[DepartmentName]" />
+                      cachedName="Title"
+                      lineageId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[Title]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2448,21 +2448,21 @@ Where		 LocationCity = ? And LocationState = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[DepartmentName_Con]"
+                      refId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Title_Con]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="250"
-                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[DepartmentName_Con]"
-                      name="DepartmentName_Con"
+                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Title_Con]"
+                      name="Title_Con"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[DepartmentName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[Title]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2584,14 +2584,14 @@ Where		 LocationCity = ? And LocationState = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_dic_Department]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_dic_Title]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_dic_Department]) [refTable]
-where [refTable].[DepartmentName] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_dic_Title]) [refTable]
+where [refTable].[TitleName] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2622,12 +2622,12 @@ where [refTable].[DepartmentName] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DepartmentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DepartmentName" dataType="DT_STR" length="250" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Active" dataType="DT_STR" length="250" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreateDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TitleID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TitleName" dataType="DT_STR" length="250" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Active" dataType="DT_STR" length="250" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreateDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[DepartmentName_Con]};</property>
+                  name="ParameterMap">#{Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Title_Con]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2651,17 +2651,17 @@ where [refTable].[DepartmentName] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow dic-Title\Lookup insert-update.Inputs[Lookup Input].Columns[DepartmentName_Con]"
+                      refId="Package\Data Flow dic-Title\Lookup insert-update.Inputs[Lookup Input].Columns[Title_Con]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="250"
-                      cachedName="DepartmentName_Con"
-                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[DepartmentName_Con]">
+                      cachedName="Title_Con"
+                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Title_Con]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">DepartmentName</property>
+                          name="JoinToReferenceColumn">TitleName</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -2738,7 +2738,7 @@ where [refTable].[DepartmentName] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select Dept as DepartmentName 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select Title
 From [dbo].[tbl_stg_Prospects]</property>
                 <property
                   dataType="System.String"
@@ -2776,25 +2776,25 @@ From [dbo].[tbl_stg_Prospects]</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[DepartmentName]"
+                      refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[Title]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].ExternalColumns[DepartmentName]"
+                      externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].ExternalColumns[Title]"
                       length="255"
-                      lineageId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[DepartmentName]"
-                      name="DepartmentName"
+                      lineageId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].Columns[Title]"
+                      name="Title"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].ExternalColumns[DepartmentName]"
+                      refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Output].ExternalColumns[Title]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      name="DepartmentName" />
+                      name="Title" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2803,12 +2803,12 @@ From [dbo].[tbl_stg_Prospects]</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Error Output].Columns[DepartmentName]"
+                      refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Error Output].Columns[Title]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Error Output].Columns[DepartmentName]"
-                      name="DepartmentName" />
+                      lineageId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      name="Title" />
                     <outputColumn
                       refId="Package\Data Flow dic-Title\OLE DB Source for dic-Title.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2842,7 +2842,7 @@ From [dbo].[tbl_stg_Prospects]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[tbl_dic_Department]</property>
+                  name="OpenRowset">[dbo].[tbl_dic_Title]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2907,13 +2907,13 @@ From [dbo].[tbl_stg_Prospects]</property>
                       externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
                       lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Active_Con]" />
                     <inputColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].Columns[DepartmentName_Con]"
+                      refId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].Columns[Title_Con]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="250"
-                      cachedName="DepartmentName_Con"
-                      externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentName]"
-                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[DepartmentName_Con]" />
+                      cachedName="Title_Con"
+                      externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[TitleName]"
+                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Title_Con]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2932,15 +2932,15 @@ From [dbo].[tbl_stg_Prospects]</property>
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentID]"
+                      refId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[TitleID]"
                       dataType="i4"
-                      name="DepartmentID" />
+                      name="TitleID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[DepartmentName]"
+                      refId="Package\Data Flow dic-Title\OLE DB Source to dic-Title.Inputs[OLE DB Destination Input].ExternalColumns[TitleName]"
                       codePage="1252"
                       dataType="str"
                       length="250"
-                      name="DepartmentName" />
+                      name="TitleName" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2987,9 +2987,9 @@ From [dbo].[tbl_stg_Prospects]</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Update		 [dbo].[tbl_dic_Department]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Update		 [dbo].[tbl_dic_Title]
 set			 Active = ?, UpdateDate = getdate()
-Where		 DepartmentName = ?</property>
+Where		 TitleName = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3020,13 +3020,13 @@ Where		 DepartmentName = ?</property>
                       externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Update records dic-Title.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Active_Con]" />
                     <inputColumn
-                      refId="Package\Data Flow dic-Title\OLE DB Update records dic-Title.Inputs[OLE DB Command Input].Columns[DepartmentName_Con]"
+                      refId="Package\Data Flow dic-Title\OLE DB Update records dic-Title.Inputs[OLE DB Command Input].Columns[Title_Con]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="250"
-                      cachedName="DepartmentName_Con"
+                      cachedName="Title_Con"
                       externalMetadataColumnId="Package\Data Flow dic-Title\OLE DB Update records dic-Title.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[DepartmentName_Con]" />
+                      lineageId="Package\Data Flow dic-Title\Data Conversion.Outputs[Data Conversion Output].Columns[Title_Con]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3971,37 +3971,37 @@ Where		 DepartmentName = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow dic-Title.Paths[Lookup No Match Output]"
-          TopLeft="210.609525327618,324.08627724675">
+          TopLeft="239.009525327618,324.08627724675">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-49.0095253276181,60.972550701243"
+              EndConnector="-77.409525327618,60.972550701243"
               Start="0,0"
-              End="-49.0095253276181,53.472550701243">
+              End="-77.409525327618,53.472550701243">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.7142072175705" />
+                    End="0,26.4862753506215" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.7142072175705"
-                    Point2="0,24.7142072175705"
-                    Point3="-4,24.7142072175705" />
+                    Point1="0,26.4862753506215"
+                    Point2="0,30.4862753506215"
+                    Point3="-4,30.4862753506215" />
                   <mssgle:LineSegment
-                    End="-45.0095253276181,24.7142072175705" />
+                    End="-73.409525327618,30.4862753506215" />
                   <mssgle:CubicBezierSegment
-                    Point1="-45.0095253276181,24.7142072175705"
-                    Point2="-49.0095253276181,24.7142072175705"
-                    Point3="-49.0095253276181,28.7142072175705" />
+                    Point1="-73.409525327618,30.4862753506215"
+                    Point2="-77.409525327618,30.4862753506215"
+                    Point3="-77.409525327618,34.4862753506215" />
                   <mssgle:LineSegment
-                    End="-49.0095253276181,53.472550701243" />
+                    End="-77.409525327618,53.472550701243" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-80.311149382559,29.7142072175705,111.6127734375,11.609375"
+              BoundingBox="-94.511149382559,35.4862753506215,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4077,6 +4077,50 @@ Where		 DepartmentName = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow dic-Location\OLE DB Source to dic-Location">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow dic-Title\OLE DB Source for dic-Title">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow dic-Title\Lookup insert-update">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_dic_Title]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow dic-Title\OLE DB Source to dic-Title">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
