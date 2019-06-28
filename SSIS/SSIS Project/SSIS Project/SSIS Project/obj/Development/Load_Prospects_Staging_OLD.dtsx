@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Staging_OLD"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{79B70177-423F-405B-A5AF-142646A6629C}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{FC3663CA-E915-47FD-956E-7A1EAF453900}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,6 +27,159 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="AuditIfor file txt connection"
+      DTS:DTSID="{6EEFC040-D264-4AA6-8836-B12D45EEA4C7}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\SSIS Lab 1\LearningSSIS Project\AuditInfo.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name "
+              DTS:DTSID="{C307F8A6-1A7D-408D-B554-256C68C4B97D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title "
+              DTS:DTSID="{B634BEB6-A5A6-4A14-99A4-74F49992B062}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Company "
+              DTS:DTSID="{A796EC45-74D9-4211-8DD5-4ABC074AFEDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{CEFD5D22-66DA-4206-A886-A3A9EB35B52F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="250"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name_Con"
+              DTS:DTSID="{AFED0BAD-6FB6-4EA6-82C3-CB870894B57A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="250"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title_Con"
+              DTS:DTSID="{57FBE22E-62D7-4972-BB5C-3A9EC779E76C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="250"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Company_Con"
+              DTS:DTSID="{6791BD5D-85C0-4717-9F28-4D805886606E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="250"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Con"
+              DTS:DTSID="{F3FBCF8C-2FBC-4CDC-A807-B3F7EF484657}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Package ID"
+              DTS:DTSID="{4E66B157-4A1E-4170-A095-93F39EBCC3EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="64"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Package name"
+              DTS:DTSID="{FB3E4F7B-CFDD-4C19-A4D0-292694607546}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Execution start time"
+              DTS:DTSID="{5E1ED289-2B98-4C75-9437-B0264F42A108}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Machine name"
+              DTS:DTSID="{153FEBC1-C6BC-4327-9CEA-CFB8A3D76B85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="64"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="User name"
+              DTS:DTSID="{88607D17-5F42-4838-A899-179DD4E2F961}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="72"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Execution instance GUID"
+              DTS:DTSID="{2407C329-8D67-49AB-8FC7-27BA23B4CD2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="64"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Task name"
+              DTS:DTSID="{72BCB8EE-77BD-4B3B-A8A2-728672B201FE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -49,6 +202,16 @@
       DTS:ObjectName="File_Path">
       <DTS:VariableValue
         DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5F91F058-886A-4899-B115-61A401E5C4AE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="test">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -112,6 +275,126 @@
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Audit"
+                  componentClassID="Microsoft.Lineage"
+                  contactInfo="Audit;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Includes data about the environment in which the package runs. Map system variables to new output columns. For example, add the name of the computer and operator to the data flow."
+                  name="Audit">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Audit.Inputs[Audit Input 1]"
+                      name="Audit Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1]"
+                      exclusionGroup="1"
+                      name="Audit Output 1"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Audit.Inputs[Audit Input 1]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Package ID]"
+                          dataType="guid"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Package ID]"
+                          name="Package ID">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">1</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Package name]"
+                          dataType="wstr"
+                          length="64"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Package name]"
+                          name="Package name">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">2</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Execution start time]"
+                          dataType="date"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Execution start time]"
+                          name="Execution start time">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">4</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Machine name]"
+                          dataType="wstr"
+                          length="15"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Machine name]"
+                          name="Machine name">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">5</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[User name]"
+                          dataType="wstr"
+                          length="64"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[User name]"
+                          name="User name">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">6</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Execution instance GUID]"
+                          dataType="guid"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Execution instance GUID]"
+                          name="Execution instance GUID">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Task name]"
+                          dataType="wstr"
+                          length="64"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Task name]"
+                          name="Task name">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies which audit item this column produces."
+                              name="LineageItemSelected"
+                              typeConverter="LineageItemSelected">7</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Foreach Loop Container\Data Flow Task\Data Conversion"
                   componentClassID="Microsoft.DataConvert"
@@ -439,6 +722,204 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Flat File Destination">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Package ID]"
+                          cachedDataType="guid"
+                          cachedName="Package ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Package ID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Package ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Package name]"
+                          cachedDataType="wstr"
+                          cachedLength="64"
+                          cachedName="Package name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Package name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Package name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Execution start time]"
+                          cachedDataType="date"
+                          cachedName="Execution start time"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Execution start time]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Execution start time]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Machine name]"
+                          cachedDataType="wstr"
+                          cachedLength="15"
+                          cachedName="Machine name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Machine name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Machine name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[User name]"
+                          cachedDataType="wstr"
+                          cachedLength="64"
+                          cachedName="User name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[User name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[User name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Execution instance GUID]"
+                          cachedDataType="guid"
+                          cachedName="Execution instance GUID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Execution instance GUID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Execution instance GUID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Task name]"
+                          cachedDataType="wstr"
+                          cachedLength="64"
+                          cachedName="Task name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Task name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1].Columns[Task name]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name ]"
+                          dataType="wstr"
+                          length="255"
+                          name="Name " />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Title ]"
+                          dataType="wstr"
+                          length="255"
+                          name="Title " />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Company ]"
+                          dataType="wstr"
+                          length="255"
+                          name="Company " />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          name="Location" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name_Con]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Name_Con" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Title_Con]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Title_Con" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Company_Con]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Company_Con" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Location_Con]"
+                          codePage="1252"
+                          dataType="str"
+                          length="250"
+                          name="Location_Con" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Package ID]"
+                          dataType="guid"
+                          name="Package ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Package name]"
+                          dataType="wstr"
+                          length="64"
+                          name="Package name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Execution start time]"
+                          dataType="date"
+                          name="Execution start time" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Machine name]"
+                          dataType="wstr"
+                          length="15"
+                          name="Machine name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[User name]"
+                          dataType="wstr"
+                          length="64"
+                          name="User name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Execution instance GUID]"
+                          dataType="guid"
+                          name="Execution instance GUID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Task name]"
+                          dataType="wstr"
+                          length="64"
+                          name="Task name" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Multicast"
+                  componentClassID="Microsoft.Multicast"
+                  contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+                  name="Multicast">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+                      name="Multicast Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 1"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 2"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Multicast.Outputs[Multicast Output 4]"
+                      dangling="true"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 4"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -636,8 +1117,13 @@
               </components>
               <paths>
                 <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Audit Output 1]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Audit Output 1"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Audit.Outputs[Audit Output 1]" />
+                <path
                   refId="Package\Foreach Loop Container\Data Flow Task.Paths[Data Conversion Output]"
-                  endId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
                   name="Data Conversion Output"
                   startId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
                 <path
@@ -645,6 +1131,16 @@
                   endId="Package\Foreach Loop Container\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
                   name="Excel Source Output"
                   startId="Package\Foreach Loop Container\Data Flow Task\Excel file B source.Outputs[Excel Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Multicast Output 1]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination.Inputs[OLE DB Destination Input]"
+                  name="Multicast Output 1"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Multicast Output 2]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Audit.Inputs[Audit Input 1]"
+                  name="Multicast Output 2"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -726,22 +1222,22 @@
     design-time-name="Package\Foreach Loop Container\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="164,41.6"
           Id="Package\Foreach Loop Container\Data Flow Task\Excel file B source"
-          TopLeft="199.42857482482,35.4823534388031" />
+          TopLeft="204.0000034741,35.4823534388031" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\Foreach Loop Container\Data Flow Task\Data Conversion"
-          TopLeft="196.00000333786,143.764707898599" />
+          TopLeft="200.57143198714,143.764707898599" />
         <NodeLayout
           Size="218.4,41.6"
           Id="Package\Foreach Loop Container\Data Flow Task\OLE DB Prospects Destination"
-          TopLeft="187.428574620461,262.44706250425" />
+          TopLeft="175.428574416102,297.317651228591" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="282.51428908134,77.0823534388031">
+          TopLeft="287.08571773062,77.0823534388031">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -761,32 +1257,110 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Foreach Loop Container\Data Flow Task\Multicast"
+          TopLeft="217.714289421938,220.235297206364" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="283.60000333786,185.364707898599">
+          TopLeft="284.942860704539,185.364707898599">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13.0285712826009,77.0823546056517"
+              EndConnector="0,34.8705893077649"
               Start="0,0"
-              End="13.0285712826009,69.5823546056517">
+              End="0,27.3705893077649">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.5411773028259" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5411773028259"
-                    Point2="0,38.5411773028259"
-                    Point3="4,38.5411773028259" />
+                    End="0,27.3705893077649" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Multicast Output 1]"
+          TopLeft="283.17143191902,261.835297206364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.4823540222271"
+              Start="0,0"
+              End="0,27.9823540222271">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="9.02857128260086,38.5411773028259" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9.02857128260086,38.5411773028259"
-                    Point2="13.0285712826009,38.5411773028259"
-                    Point3="13.0285712826009,42.5411773028259" />
+                    End="0,27.9823540222271" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="102.4,41.6"
+          Id="Package\Foreach Loop Container\Data Flow Task\Audit"
+          TopLeft="445.142864723595,213.364708627879" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Multicast Output 2]"
+          TopLeft="345.714289421938,237.600002917121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.4285753016568,0"
+              Start="0,0"
+              End="91.9285753016568,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="13.0285712826009,69.5823546056517" />
+                    End="91.9285753016568,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Destination"
+          TopLeft="442.914292555439,289.835297935644" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Audit Output 1]"
+          TopLeft="496.342864723595,254.964708627879">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="32.1714278318444,34.8705893077653"
+              Start="0,0"
+              End="32.1714278318444,27.3705893077653">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4352946538827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4352946538827"
+                    Point2="0,17.4352946538827"
+                    Point3="4,17.4352946538827" />
+                  <mssgle:LineSegment
+                    End="28.1714278318444,17.4352946538827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.1714278318444,17.4352946538827"
+                    Point2="32.1714278318444,17.4352946538827"
+                    Point3="32.1714278318444,21.4352946538827" />
+                  <mssgle:LineSegment
+                    End="32.1714278318444,27.3705893077653" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -2,23 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS Project</Name>
-    <LastWriteTime>2019-06-25T16:58:54.9111233Z</LastWriteTime>
+    <LastWriteTime>2019-06-28T20:44:47.751832Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2019-06-24T19:42:44.3577136Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>Load_Prospects_Staging_OLD.dtsx</Name>
-      <LastWriteTime>2019-06-25T16:59:35.9413092Z</LastWriteTime>
+      <LastWriteTime>2019-06-27T20:38:53.7911668Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Load_Prospects_Staging.dtsx</Name>
-      <LastWriteTime>2019-06-25T19:03:05.7525025Z</LastWriteTime>
+      <LastWriteTime>2019-06-26T00:14:15.2536884Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Testing.dtsx</Name>
+      <LastWriteTime>2019-06-27T20:39:39.0603433Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Load_Prospects_Dictionaries.dtsx</Name>
+      <LastWriteTime>2019-06-28T21:14:29.3876985Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

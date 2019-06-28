@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="69"
-  DTS:VersionGUID="{C37C7D96-6821-4C0E-81EA-65DB151BAB98}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{3A71338E-11F0-4AC8-8342-3AC1B17A0A03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -59,7 +59,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FileNewName">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B_2019-06-25_140309.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B_2019-06-26_145013.xls</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2016,13 +2016,13 @@ Where	Name = ?</property>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\File System Rname files"
+          DTS:refId="Package\Foreach Loop Container\File System Rename files"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="File System Task"
           DTS:DTSID="{AAE94044-ECAE-4DAE-AE1E-0D21503918A1}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="File System Rname files"
+          DTS:ObjectName="File System Rename files"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
@@ -2045,12 +2045,12 @@ Where	Name = ?</property>
           DTS:From="Package\Foreach Loop Container\Data Flow Task"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Foreach Loop Container\File System Rname files" />
+          DTS:To="Package\Foreach Loop Container\File System Rename files" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
           DTS:DTSID="{A057C932-AD5D-4E50-A56D-06F036F469B6}"
-          DTS:From="Package\Foreach Loop Container\File System Rname files"
+          DTS:From="Package\Foreach Loop Container\File System Rename files"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
           DTS:To="Package\Foreach Loop Container\File System Move files" />
@@ -2090,7 +2090,7 @@ Where	Name = ?</property>
         <NodeLayout
           Size="211.2,41.6"
           Id="Package\Execute SQL Truncate Table"
-          TopLeft="204.571432055259,36.0941181532652" />
+          TopLeft="211.000003593308,33.8000004740322" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Foreach Loop Container\Data Flow Task"
@@ -2100,12 +2100,12 @@ Where	Name = ?</property>
           Id="Package\Foreach Loop Container\File System Move files"
           TopLeft="48.9285721681556,172.141181532652" />
         <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Foreach Loop Container\File System Rname files"
+          Size="196,41.6"
+          Id="Package\Foreach Loop Container\File System Rename files"
           TopLeft="31.314289421938,82.2117685067201" />
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
-          TopLeft="124.485720319164,53.2235326377578">
+          TopLeft="126.085720319164,53.2235326377578">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2127,7 +2127,7 @@ Where	Name = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="126.721430795047,123.81176850672">
+          TopLeft="128.321430795047,123.81176850672">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2156,30 +2156,18 @@ Where	Name = ?</property>
           TopLeft="186.285717458141,145.600002041985" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="310.171432055259,77.6941181532652">
+          TopLeft="318.442860525725,75.4000004740323">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.1142854028819,67.9058838887198"
+              EndConnector="0,70.2000015679528"
               Start="0,0"
-              End="10.1142854028819,60.4058838887198">
+              End="0,62.7000015679528">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.9529419443599" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.9529419443599"
-                    Point2="0,33.9529419443599"
-                    Point3="4,33.9529419443599" />
-                  <mssgle:LineSegment
-                    End="6.11428540288193,33.9529419443599" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.11428540288193,33.9529419443599"
-                    Point2="10.1142854028819,33.9529419443599"
-                    Point3="10.1142854028819,37.9529419443599" />
-                  <mssgle:LineSegment
-                    End="10.1142854028819,60.4058838887198" />
+                    End="0,62.7000015679528" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

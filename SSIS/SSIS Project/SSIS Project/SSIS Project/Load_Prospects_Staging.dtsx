@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{DDBCF975-7685-4CCA-A107-2F0DB1FC5BAF}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{3A71338E-11F0-4AC8-8342-3AC1B17A0A03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2090,7 +2090,7 @@ Where	Name = ?</property>
         <NodeLayout
           Size="211.2,41.6"
           Id="Package\Execute SQL Truncate Table"
-          TopLeft="204.571432055259,36.0941181532652" />
+          TopLeft="211.000003593308,33.8000004740322" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Foreach Loop Container\Data Flow Task"
@@ -2156,30 +2156,18 @@ Where	Name = ?</property>
           TopLeft="186.285717458141,145.600002041985" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="310.171432055259,77.6941181532652">
+          TopLeft="318.442860525725,75.4000004740323">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.1142854028819,67.9058838887198"
+              EndConnector="0,70.2000015679528"
               Start="0,0"
-              End="10.1142854028819,60.4058838887198">
+              End="0,62.7000015679528">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.9529419443599" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.9529419443599"
-                    Point2="0,33.9529419443599"
-                    Point3="4,33.9529419443599" />
-                  <mssgle:LineSegment
-                    End="6.11428540288193,33.9529419443599" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.11428540288193,33.9529419443599"
-                    Point2="10.1142854028819,33.9529419443599"
-                    Point3="10.1142854028819,37.9529419443599" />
-                  <mssgle:LineSegment
-                    End="10.1142854028819,60.4058838887198" />
+                    End="0,62.7000015679528" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
