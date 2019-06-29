@@ -117,4 +117,39 @@ From	[dbo].[tbl_dic_Location]
 Select	*
 From	[dbo].[tbl_dic_Title]
 
-TitleID	TitleName	Active	CreateDate	UpdateDate
+Create table AuditFileLoad(
+			 FileProcessedBy nvarchar(255)
+			 ,FileProcessTime datetime 
+			 ,isArchived nvarchar(15))
+
+Select		*
+From		 AuditFileLoad
+
+Create Proc UD_SP_AuditFileLoad
+@FileName nvarchar(255)
+AS
+	Begin
+		Insert into AuditFileLoad (FileProcessedBy,FileProcessTime,isArchived)
+		Select	@FileName,GETDATE(),'Yes'
+	End
+
+Exec UD_SP_AuditFileLoad  'Prospects-abc.xls'
+
+
+Declare @str varchar(255)
+set @str = 'thisis\te\FileName'--'C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls'
+Declare @newStr varchar(255) = (@str)
+
+Select REVERSE( SUBSTRING(Reverse(@newStr),0,CHARINDEX('\',Reverse(@newStr))))
+
+ (DT_WSTR, 50) FINDSTRING( @[User::File_Path] , "\", 1) 
+FINDSTRING("New York, NY, NY", "NY", 1) 
+
+--to get filename from location file path
+ (DT_WSTR, 50)REVERSE( SUBSTRING(Reverse( @[User::File_Path]) ,1, FINDSTRING( Reverse( @[User::File_Path] ) ,"\\" ,1 )-1))
+
+Select		*
+From		 AuditFileLoad
+
+Select		*
+From		[dbo].[tbl_stg_Prospects]

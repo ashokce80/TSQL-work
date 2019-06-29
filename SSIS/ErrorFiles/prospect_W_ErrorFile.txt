@@ -1,0 +1,25 @@
+Name_Con,Title_Con,Company_Con,Location_Con,FileName_Con
+Waldinger, Johannes ,CTO ,TomTec Imaging Systems GmbH ,,prospect_W.xls
+Waltersdorf, Bryan ,,IdentiPlus ,Brookfield, WI,prospect_W.xls
+Waltersdorf, Keith ,,IdentiPlus ,Brookfield, WI,prospect_W.xls
+Wannamaker, Christine ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_W.xls
+Warren, Mary Lou ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_W.xls
+Webber, Ben ,,Citadel Events ,?,prospect_W.xls
+Weir, Michele ,,Prosch Consulting ,Hanover Park, IL,prospect_W.xls
+White, David ,,ETS ,Glenview, IL,prospect_W.xls
+Whitson, Scott ,,St. Luke's Hospital ,Cedar Rapids, IA,prospect_W.xls
+Wicklund, Eric ,,MedTech Media ,New Gloucester, ME,prospect_W.xls
+Wiener, Valerie ,,Nevada State Senator ,Las Vegas, NV,prospect_W.xls
+Williams, Alan ,,Caesars Entertainment ,Las Vegas, NV,prospect_W.xls
+Williams, David ,,Emdeon ,Nashville, TN,prospect_W.xls
+Winkler, Janice ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_W.xls
+Winn, Kirstie ,,Experient ,Frederick, MD,prospect_W.xls
+Winter, Henk ,,Icon Healthcare ,AC Zeist,prospect_W.xls
+Wintle, Andy ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_W.xls
+Wong, Eric ,Deputy CMIO ,Tan Tock Seng Hospital ,,prospect_W.xls
+Wong, Loong Kin ,Chief Financial Officer ,Singapore General Hospital Pte Ltd ,,prospect_W.xls
+Wong, Yau-Chung ,Deputy Director, Operations ,Tan Tock Seng Hospital ,,prospect_W.xls
+Woo, Kyoung-Gu ,Group Leader ,SAIT, Samsung Electronics ,,prospect_W.xls
+Wood, Durf ,,The Menninger Clinic ,Houston, TX,prospect_W.xls
+Worthington, Mike ,,Farnam Street Financial ,Minnetonka, MN,prospect_W.xls
+WU, XiaoDong ,President ,UFIDA Healthcare Information System ,,prospect_W.xls

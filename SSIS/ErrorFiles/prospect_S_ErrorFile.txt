@@ -1,0 +1,58 @@
+Name_Con,Title_Con,Company_Con,Location_Con,FileName_Con
+Sager, Greg ,,Experient ,Frederick, MD,prospect_S.xls
+Sahlin, Dale ,,AVMG ,Richardson, TX ,prospect_S.xls
+Saks, Beverly ,,Kaiser-Permanenee ,Burbank, CA,prospect_S.xls
+Sampath, Aravind ,,Wavemark ,Littleton, MA,prospect_S.xls
+Sanders, Jennifer ,,ETS ,Glenview, IL,prospect_S.xls
+Sapire, Kenneth ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_S.xls
+Saprykina, Victoria ,Mrs ,GK Basis ,,prospect_S.xls
+SCAFF, ALFREDO ,,Cisco ,San Jose, CA,prospect_S.xls
+Scales, Allen ,,Allen Scales, LLC ,Wayne, PA,prospect_S.xls
+Scarboro, Kristin ,,ProShow ,Oakland, CA,prospect_S.xls
+Schasfoort, Geraldien ,,Man & Machine, Inc. ,Landover, MD,prospect_S.xls
+Scheuer, Armin ,,HIMSS ,Chicago, IL,prospect_S.xls
+Schlegel, Stephen ,Account Executive ,,Katy, TX,prospect_S.xls
+Schulman, Kevin ,,Duke University ,Durham, NC,prospect_S.xls
+schwartz, yacob ,Erp Iplementation Manager ,Clalit health services,Israel ,,prospect_S.xls
+Schweikhart, Sharon ,,IHE ,Chicago, IL,prospect_S.xls
+Sendobry, Mary ,,Novartis ,Wildwood, MO,prospect_S.xls
+Seong, Nak Jong ,Medical Informatics Physician ,Seoul National Univ' Bundang Hospital ,,prospect_S.xls
+Sharma, Shekhar ,,Johns Hopkins ,Glen Allen, VA,prospect_S.xls
+Shattuck, Ty ,,IHE ,Chicago, IL,prospect_S.xls
+Shavit, David ,C.I.O ,Bney Zion Medical Center ,,prospect_S.xls
+Sheikh, Asad ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_S.xls
+Sheridan, Frank ,,Floor Manager ,Chicago, IL,prospect_S.xls
+Shingles, Jonathan ,,St. Lukes Hospital and Health Network ,Bethlehem, PA,prospect_S.xls
+Shiota, Shinichi ,president ,Nakatsu Information Communication Center ,,prospect_S.xls
+Shiverts, Robert ,,Oscar ,Chicago, IL,prospect_S.xls
+Shook, Keith ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_S.xls
+Simkins, Kristina ,,OnPeak ,Chicago, IL,prospect_S.xls
+Simmelink, Pete ,,MIM Software ,Beachwood, OH,prospect_S.xls
+Sinnakaruppan, R. ,Mr ,National Healthcare Group ,,prospect_S.xls
+Sivek, Barbara ,,Siemens ,Malvern, PA,prospect_S.xls
+Slinkard, Maribeth ,,as ,sdfsf, AR,prospect_S.xls
+Slinkard, Maribeth ,,qwe ,Schdy, NY,prospect_S.xls
+Sloan, Elliott ,,IHE ,Chicago, IL,prospect_S.xls
+Smith, Brad ,,Experient ,Frederick, MD,prospect_S.xls
+Smith, Rick ,,INOC ,Northbrook, IL,prospect_S.xls
+Smock, Ben ,,HIMSS Bistro ,Chicago, IL ,prospect_S.xls
+Sobas, Mark ,,Freeman ,Chicago, IL,prospect_S.xls
+Soderberg, Mattias ,Sr. Technology Consultant ,EMC ,,prospect_S.xls
+Soh, Gim Teik ,Mr ,National Healthcare Group ,,prospect_S.xls
+Souza, Valeria ,,Cisco ,San Jose, CA,prospect_S.xls
+Souza, Valéria ,,Cisco ,San Jose, CA,prospect_S.xls
+Spitale, Phil ,,Floor Manager ,Chicago, IL,prospect_S.xls
+St. Clair, David ,,St. Clair LLC ,Wayne, PA,prospect_S.xls
+Stack, Brendan ,,Experient ,Frederick, MD,prospect_S.xls
+Stanford, Vicky ,,Cornell University ,Escondido, CA,prospect_S.xls
+Stein, Nichole ,,KeyMark Inc ,Liberty, SC,prospect_S.xls
+Stephens, Jennifer ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_S.xls
+Stevens, Bill ,,Catholic Health Initiatives ,Englewood, CO,prospect_S.xls
+Stiltner, Jason ,,Watson Clinic LLP ,Lakeland, FL,prospect_S.xls
+Stout, Bret ,,Reingold ,Washington, DC,prospect_S.xls
+Suarez, Armando ,,Freeman ,Chicago, IL,prospect_S.xls
+Sullivan, Tom ,,MedTech Media ,New Gloucester, ME,prospect_S.xls
+Sundaram, Anand ,,Crico ,Cambridge, MA,prospect_S.xls
+Svoboda, Mike ,,Tech Data ,St Paul, MN,prospect_S.xls
+Sweetman, Pauline ,Senior consultant in Health IT ,Independent ,,prospect_S.xls
+Sym, Tyrell ,,OnPeak ,Chicago, IL,prospect_S.xls

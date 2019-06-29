@@ -1,0 +1,24 @@
+Name_Con,Title_Con,Company_Con,Location_Con,FileName_Con
+Ragone, Lenny ,,TMI ,Chicago, IL,prospect_R.xls
+Rajendran, Manick ,,IHE ,Chicago, IL,prospect_R.xls
+Raty, Laura ,Deputy Mayor ,City of Helsinki ,,prospect_R.xls
+Reed, Katie ,,OnPeak ,Chicago, IL,prospect_R.xls
+Reeder, Gerard ,,EHR Doctors, Inc ,Pompano Beach, FL,prospect_R.xls
+Renwick, Martin ,Senior Executive ,Accenture, LLC ,,prospect_R.xls
+Rhea, Farrah ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_R.xls
+Ricafoot, Carla ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_R.xls
+Rice, Jenise ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_R.xls
+Rich, Patrick ,,Canadian Health ,Ottawa, ON,prospect_R.xls
+Richard, Tim ,,IHE ,Chicago, IL,prospect_R.xls
+Rickard, Peg ,,Douglas Stewart ,Madison, WI,prospect_R.xls
+Rickert, Jonathan ,,Healthcare Growth Partners, LLC ,Elmhurst, IL,prospect_R.xls
+Rivera, Margarita ,,Florida Hospital ,Orlando, FL,prospect_R.xls
+Roberts, John ,,,Eugene, OR,prospect_R.xls
+Roberts, Traci ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_R.xls
+Robertson, Chris ,,Oscar ,Chicago, IL,prospect_R.xls
+Rönkkö, Ilona ,Service Designer ,Hämeenlinnan Terveyspalvelut ,,prospect_R.xls
+Rothman, Brian ,,Vanderbilt ,Nashville, TN,prospect_R.xls
+Rouse, James ,,Labcorp ,Burlington, NC,prospect_R.xls
+Rowe, Jeff ,,MedTech Media ,New Gloucester, ME,prospect_R.xls
+Royster, Rose Marie ,,OnPeak ,Chicago, IL,prospect_R.xls
+Ryan, Jeremy ,,USAF ,San Antonio, TX,prospect_R.xls

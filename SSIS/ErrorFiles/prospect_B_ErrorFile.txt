@@ -1,0 +1,38 @@
+Name_Con,Title_Con,Company_Con,Location_Con,FileName_Con
+BAEK, RONG-MIN ,Dr. ,Seoul National University Bundang Hosp. ,,prospect_B.xls
+Bailey, Mark ,,Oscar ,Chicago, IL,prospect_B.xls
+Baker-Neufeld, Judi ,,Competitive Edge ,Chicago, IL,prospect_B.xls
+Bartell, James ,,TMI ,Chicago, IL,prospect_B.xls
+Beard, Brian ,,Cisco ,San Jose, CA,prospect_B.xls
+Beaudoin, Jack ,,MedTech Media ,New Gloucester, ME,prospect_B.xls
+Behm, Steve ,,DocuWare Corporation ,Newburgh, NY,prospect_B.xls
+Belen, Luis ,,Latino consultants ,Chicago, IL,prospect_B.xls
+Bender, Duane ,,IHE ,Chicago, IL,prospect_B.xls
+Bengele, Dan ,,EMC Corporation ,Kalamazoo, MI ,prospect_B.xls
+Berg, CJ ,,Champion ,Northlake, IL,prospect_B.xls
+Bergman, Kristi ,,PIM ,Chicago, IL,prospect_B.xls
+Berlin, Jonathan ,,NorthShore University Health System ,Chicago, IL,prospect_B.xls
+Berry, John ,,,San Dimas, CA,prospect_B.xls
+Bethke, Heidi ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_B.xls
+Billins, Jennica ,,Inland Empire Health Plan ,San Bernardino, CA,prospect_B.xls
+Biunno, Vincent ,,MedTech Media ,New Gloucester, ME,prospect_B.xls
+bjorling, peter ,,EMC ,STOCKHOLM,prospect_B.xls
+Bogue, Jane ,,MedTech Media ,New Gloucester, ME,prospect_B.xls
+Bolander, Frida ,,EMC ,STOCKHOLM,prospect_B.xls
+Borjes, Matthew ,,Space Saving Solutions ,Lexington, SC,prospect_B.xls
+Bovee, Katie ,,xxx ,Eudora, KS,prospect_B.xls
+Bovee, Katie ,,xxx ,Deerfield, IL,prospect_B.xls
+Bowen, Ruth ,,CPHIMS Review Course Trainer ,Chicago, IL,prospect_B.xls
+Brady, Michael ,,AT&T ,Dallas, TX,prospect_B.xls
+Bremer, William ,,IHE ,Chicago, IL,prospect_B.xls
+Brightwell, Dan ,Product Manager ,,No city,prospect_B.xls
+Brion, John ,,Session Recordings Multiview ,Chicago, IL,prospect_B.xls
+Brody, Michael ,,Footlights Magazine & Podiatry Mgmt Mag ,Commack, NY,prospect_B.xls
+Brown, Katie ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_B.xls
+Brown, Paul ,,IHE ,Chicago, IL,prospect_B.xls
+Brydges, Gary ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_B.xls
+Buettner, Dan ,Founder of Blue Zones ,,Chicago, IL,prospect_B.xls
+bundy, roger ,,Brilogy ,Santa Ana, CA,prospect_B.xls
+Buroker, Darby ,,The Rhode Island Quality Institute ,Providence, RI,prospect_B.xls
+Burton, Greg ,,OnPeak ,Chicago, IL,prospect_B.xls
+Bybel, Matt ,,Experient ,Frederick, MD,prospect_B.xls

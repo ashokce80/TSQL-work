@@ -1,0 +1,46 @@
+Name_Con,Title_Con,Company_Con,Location_Con,FileName_Con
+D'Antoni, Richard,, MEDecision, Wayne, PA,prospect_D.xls
+Davie, Daniel,, EMRApproved.com, Lake Bluff, IL,prospect_D.xls
+Davis, Jefferson,, Competitive Edge, Chicago, IL,prospect_D.xls
+DE LIBERO, ENZO, SISTEMAS RIS/PACS, MEDITRON,,prospect_D.xls
+Deck, James,, MTS Health Care, Pasadena, CA,prospect_D.xls
+Deibel, Bill,, ETS, Glenview, IL,prospect_D.xls
+DeJesus, Sandy,, Floral Expo, Orlando, FL,prospect_D.xls
+DeKeyser, Kathryn,, Heart Hospital of Austin, Austin, TX,prospect_D.xls
+Dent, Thomas,, ICLOPS LLC, Chicago, IL,prospect_D.xls
+DePalo, Philip,, IHE, Chicago, IL,prospect_D.xls
+Dexter, Regina,, JobMine, Chicago, IL,prospect_D.xls
+Dgfd, Dgdfg,, dfgfd, Arlington, VA,prospect_D.xls
+Diaz, Adrian, SISTEMAS RIS/PACS, MEDITRON,,prospect_D.xls
+Dicker, Rachel,, HC Pro, Danvers, MA,prospect_D.xls
+Diguette, Christopher,, Reliant Medical Group, Worcester, MA,prospect_D.xls
+Dillon, Amber, Global Clinical Education, Philips,,prospect_D.xls
+Dinsmore, Dan,, MedTech Media, New Gloucester, ME,prospect_D.xls
+Doan, Stacie,, Experient, Frederick, MD,prospect_D.xls
+Donnelly, John,, IHE, Chicago, IL,prospect_D.xls
+Dorsey, Amanda,, University of Alabama @ Birmingham, Birmingham, AL,prospect_D.xls
+ , Director, WW Channel Sales, ADARA Networks, San Jose, CA,prospect_D.xls
+Dovgan, Viktoriya,, PrintServicesGroup, Laguna Niguel, CA,prospect_D.xls
+Driscoll, Jerry,, Lawson, an Infor affiliate, Saint Paul, MN,prospect_D.xls
+Dubrovich, Rose,, OnPeak, Chicago, IL,prospect_D.xls
+Dudley, Dephanie,, Summit, Uniondale, NY,prospect_D.xls
+Durfee, Libby,, Floor Manager, Chicago, IL,prospect_D.xls
+Bogue, Jane ,,MedTech Media ,New Gloucester, ME,prospect_D.xls
+Bolander, Frida ,,EMC ,STOCKHOLM,prospect_D.xls
+Borjes, Matthew ,,Space Saving Solutions ,Lexington, SC,prospect_D.xls
+Bovee, Katie ,,xxx ,Eudora, KS,prospect_D.xls
+Bovee, Katie ,,xxx ,Deerfield, IL,prospect_D.xls
+Bowen, Ruth ,,CPHIMS Review Course Trainer ,Chicago, IL,prospect_D.xls
+Brady, Michael ,,AT&T ,Dallas, TX,prospect_D.xls
+Bremer, William ,,IHE ,Chicago, IL,prospect_D.xls
+Brightwell, Dan ,Product Manager ,,No city,prospect_D.xls
+Brion, John ,,Session Recordings Multiview ,Chicago, IL,prospect_D.xls
+Brody, Michael ,,Footlights Magazine & Podiatry Mgmt Mag ,Commack, NY,prospect_D.xls
+Brown, Katie ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_D.xls
+Brown, Paul ,,IHE ,Chicago, IL,prospect_D.xls
+Brydges, Gary ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_D.xls
+Buettner, Dan ,Founder of Blue Zones ,,Chicago, IL,prospect_D.xls
+bundy, roger ,,Brilogy ,Santa Ana, CA,prospect_D.xls
+Buroker, Darby ,,The Rhode Island Quality Institute ,Providence, RI,prospect_D.xls
+Burton, Greg ,,OnPeak ,Chicago, IL,prospect_D.xls
+Bybel, Matt ,,Experient ,Frederick, MD,prospect_D.xls

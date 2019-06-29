@@ -1,0 +1,31 @@
+Name_Con,Title_Con,Company_Con,Location_Con,FileName_Con
+Lahlass, Thomas ,,University of TX/MD Anderson Cancer Ctr. ,Houston, TX,prospect_L.xls
+Lai, Dao ,,Carpathia Hosting, Inc. ,Dulles, VA,prospect_L.xls
+Laidler, Kelly ,,MedTech Media ,New Gloucester, ME,prospect_L.xls
+Lainez, Victor ,,Floral Expo ,Orlando, FL,prospect_L.xls
+Lameira, Ana ,,PrintServicesGroup ,Laguna Niguel, CA,prospect_L.xls
+Lanning, Brian ,,Experient ,Frederick, MD,prospect_L.xls
+Larocca, Michael ,,IHE ,Chicago, IL,prospect_L.xls
+Latimer, Gail ,,Siemens Healthcare (Siemens Medical Solutions) ,Malvern, PA,prospect_L.xls
+Lavin, Thea ,,Schwartz MSL ,Waltham, MA,prospect_L.xls
+Lea, Stuart ,Chief Technology Officer ,Cheshire NHS - UK ,,prospect_L.xls
+Learned, Chris ,,AVMG ,Richardson, TX,prospect_L.xls
+Lebreton, Jacques ,,Session Recordings Multiview ,Chicago, IL,prospect_L.xls
+LEE, KEE-HYUCK ,Medical Informatics Physician ,Seoul National University Bundang Hosp ,,prospect_L.xls
+Lee, Sook San ,DEPUTY DIRECTOR ,Integrated Health Information Systems ,,prospect_L.xls
+Lee, Sow Fong ,Senior Ops Manager ,Tan Tock Seng Hospital ,,prospect_L.xls
+LEE, YOUNGAE ,Medical Record Administrator ,Seoul National Univer.Bundang Hosp ,,prospect_L.xls
+Leite, Alberto ,,Cisco ,San Jose, CA,prospect_L.xls
+LeMoine, Paul ,,Freeman ,Chicago, IL,prospect_L.xls
+Levey, Keith ,,New Orleans Conv Ctr ,New Orleans, LA,prospect_L.xls
+Lewis, Hillary ,,TexSHIELD ,Alexandria, VA,prospect_L.xls
+liang, yuk bing tony ,Programme Director ,National Cancer Centre ,,prospect_L.xls
+Lim, Walter ,,EDBI ,Redwood City, CA,prospect_L.xls
+Lisk, Cynthia ,,IHE ,Chicago, IL,prospect_L.xls
+Lithner, Tomas ,Director Consulting ,Mawell ,,prospect_L.xls
+Locke, Jimmy ,,Alliance Tech ,Austin, TX,prospect_L.xls
+Loerch, Steve ,,MedTech Media ,New Gloucester, ME,prospect_L.xls
+Loh, Jeremy ,,EDBI ,Redwood City, CA,prospect_L.xls
+Lomanno, Regina ,,SHI ,Somerset, NJ,prospect_L.xls
+Loo, Chian-Min ,Chief, Pulmonary/CCM ,Singapore General Hospital ,,prospect_L.xls
+Lucibello, Drey ,,Champion ,Northlake, IL,prospect_L.xls

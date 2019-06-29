@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS Project</Name>
-    <LastWriteTime>2019-06-28T20:44:47.751832Z</LastWriteTime>
+    <LastWriteTime>2019-06-29T16:21:02.9730955Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Load_Prospects_Staging.dtsx</Name>
-      <LastWriteTime>2019-06-26T00:14:15.2536884Z</LastWriteTime>
+      <LastWriteTime>2019-06-29T16:21:02.9491476Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Load_Prospects_Dictionaries.dtsx</Name>
-      <LastWriteTime>2019-06-28T21:33:27.0232098Z</LastWriteTime>
+      <LastWriteTime>2019-06-28T21:44:19.0282078Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
