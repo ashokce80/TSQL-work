@@ -15,8 +15,8 @@
   DTS:ObjectName="Testing"
   DTS:PackageType="5"
   DTS:SaveCheckpoints="True"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{76DD5634-EB3E-4081-9CEC-38972A24754B}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{716C3C44-8E68-4B54-8D7A-1D3AAE12052D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -650,6 +650,14 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="64.5714296710735,137.647060753977" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Execute Package Task"
+          TopLeft="51.4285723043947,308.941180803372" />
+        <NodeLayout
           Size="162.4,41.6"
           Id="Package\Execute SQL Task"
           TopLeft="253.142861453854,104.611766173023" />
@@ -657,6 +665,10 @@
           Size="172,41.6"
           Id="Package\Execute SQL Task 1"
           TopLeft="248.000004223415,236.141179782379" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Execute SQL Task 2"
+          TopLeft="49.142857979755,218.400003062978" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="334.171432838635,146.211766173023">
@@ -679,14 +691,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Execute SQL Task 2"
-          TopLeft="49.142857979755,218.400003062978" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
-          TopLeft="64.5714296710735,137.647060753977" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="137.457143825414,179.247060753977">
@@ -709,10 +713,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\Execute Package Task"
-          TopLeft="51.4285723043947,308.941180803372" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="138.885715142075,260.000003062978">
@@ -739,7 +739,7 @@
           Text="execute package task will run load...old package"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="281.6,60"
+          Size="281.6,40"
           Id="635aae4f-face-47ce-a4bd-28bbef1c0e62"
           TopLeft="233.714289694416,320.941180949228" />
       </GraphLayout>
@@ -758,7 +758,7 @@
           Text="this sql task will feed sql table with error detail once there is any errorr occured in package level"
           ParentId="Package.EventHandlers[OnError]"
           FontInfo="{assembly:Null}"
-          Size="533.6,60"
+          Size="533.6,NaN"
           Id="31854aa7-9c62-4ac8-8c0d-c4ca6fe8ad2b"
           TopLeft="238.4,43.2" />
       </GraphLayout>

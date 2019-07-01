@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-PF3DBQTQ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjBPvTZC2dUeYA6MuSqySngAAAAACAAAAAAAQZgAAAAEAACAAAAB9dqD59ZAhpY2aZ3APhe5CIW51h9ldgNFcEIRZ07YTXQAAAAAOgAAAAAIAACAAAAAaOa00bObXeXGaU6Su208ZFgVoJYX+Ms5ex2dJib5CI5AAAAC2YeRqjHrFGGwfaECDuZdDfFQFGNNSRlqcXFTFFDvdfnRXs+c2KvTuv+5iOnXtTtkN9WM5BskiQs0Uz/ImWjyWBmnP4Aps+PEOrb79vPUoAXo24n+TLDgdBKMvCIUQkFpeSA709c/tORm3yLs3F35ubi+j5xd4jgT08JmvN9PaHJF0igVmF7d8xTlQpT2K7jpAAAAAGlYe8PTwUqxKtTKsbnt05o4LycC95c5Uq0Y0rN+DRMA/SEAZl4ZI3XlpYh8vUCS9iO7W1wcNksQyL6CwkZVPyg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjBPvTZC2dUeYA6MuSqySngAAAAACAAAAAAAQZgAAAAEAACAAAABD+7/0HWAy9dVLFNsVQ/g01y8dEgms64Ag7+aEgAtRLwAAAAAOgAAAAAIAACAAAACTe7cCyoxl/gjaAFq3jxWzYYSmZ7DRbTERKvuZe1jXhpAAAACTrPLQvRz2F0j9EMC6K2QWoltM+stetEYSz7RhSC2yCW4keyy20vPIqT0h4tG8eSsb6HEwnvoiuld7nmzIG93fiuuMIUjPQHW+zwKf5cosYiSDuKkQce6RxIyE9now2YSYX3E8Qo38rMKpSrKVS9x6P+lt2lOQPefNxJ4sYjCV2C8mnupXj0y9/3We5wmiaTBAAAAAqfuDNdfAajwp6ubdqo0HlYVl0M6D/CCShRO3uvzkAljU92Yn/sQs0MyBVEe/fJIFeRDFlBivWFVI5CpOrZ4/Xg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -433,10 +433,10 @@
                 <SSIS:Property SSIS:Name="Name">Load_Prospects_Staging</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">89</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">99</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D181FDB8-0D9D-4D0B-A4C4-DF1C0D7CE464}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B0112486-831E-4892-A247-6D2664AA5FA1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -454,7 +454,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -527,7 +527,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

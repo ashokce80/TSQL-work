@@ -153,3 +153,9 @@ From		 AuditFileLoad
 
 Select		*
 From		[dbo].[tbl_stg_Prospects]
+
+Select *
+From [dbo].[tbl_stg_Prospects_Null_DATA]
+
+Select	*
+From	tbl
