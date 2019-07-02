@@ -158,4 +158,20 @@ Select *
 From [dbo].[tbl_stg_Prospects_Null_DATA]
 
 Select	*
-From	tbl
+From	[dbo].[ErrorCFLevelDetail]
+
+CREATE TABLE [dbo].[ErrorDFLevelDetail](
+	[PackageName] [varchar](250) NULL,
+	[TaskSourceName] [varchar](250) NULL,
+	[ErrorDetail] [nvarchar](400) NULL,
+	[runTime] [datetime] NULL
+) ON [PRIMARY]
+GO
+
+Select	*
+From	[dbo].[ErrorDFLevelDetail]
+
+Insert into [dbo].[ErrorDFLevelDetail] 
+Values(?,?,?,?)
+
+
