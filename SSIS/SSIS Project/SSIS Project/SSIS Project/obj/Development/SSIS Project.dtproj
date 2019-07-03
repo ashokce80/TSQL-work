@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-PF3DBQTQ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjBPvTZC2dUeYA6MuSqySngAAAAACAAAAAAAQZgAAAAEAACAAAABiP57Us0pbKxsKUeedURVRenP03cCWWm7Z/+gMFNZOuAAAAAAOgAAAAAIAACAAAABTbF7Tfgyi5F1kCdqbym5ExyJnlEOGhebOXlIveAnvMZAAAABj8I9ehShSHWOe2Q75K/XETjyEMiKmjLpO975P72oyBBfnuxngrmwx0OvxVJZS14mIOARwTz6OxVj8Yz3pD6AC7FCjaYEvfuMqK5cs21efQBEW+ZL5IDMEVzztG3f5kgYMrmhnTYKuYYatl/IEDq6w84zrClp1YEvljNvavC04UCg4vLMfYRCszaUOwVz9Rj9AAAAA7vqLu8G3PYW1tM8hmtySoE9b9T2LOSigkRrM189jhX3xV8oE+Ke3lhF1boiOyBZ4kdKzqC2Lyta2vds2GrHUrw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjBPvTZC2dUeYA6MuSqySngAAAAACAAAAAAAQZgAAAAEAACAAAACIWBLRebHQ5/GTyOiDvcR6Nz48UUeSqVulVOVviFiCFAAAAAAOgAAAAAIAACAAAAC80TDcFEg/0yWf4EM8088yaPOeT8SkG4zbglmDaC38JpAAAAAS4ZQ6dEmeIuahJ+ZW1/eP8oEdvD/B/RQMazx9lL6E/iZIGrnY285T8p0AAsXntruW+Xc31Lhy8ySrcSSjMY6H7/XOoZYxoPfOqTgSHU5v2+OBs8P3yCTHwnjFj5vvXlLX8zXlwbUm2OoCXPTefOFnwAAQ2S6T6eXuHK/uaYVY/BCj2pWVyclAPvKc2e0sVB9AAAAAFQMKIVCwvDJCgNXb6Ai2SDK0HFWoWJ/55eSuDKD8EydCj7n7zOzSTVqU4SGoJ3vu1L8EdNEdBwZVDg4PIqt6Vw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -433,10 +433,10 @@
                 <SSIS:Property SSIS:Name="Name">Load_Prospects_Staging</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">99</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">100</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B0112486-831E-4892-A247-6D2664AA5FA1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9334F1CE-7C3B-41DE-80DF-CF8F1BDD0BE4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -454,7 +454,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls;Extended Properties="EXCEL 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -527,7 +527,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -677,8 +677,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1017,17 +1015,17 @@
                 <SSIS:Property SSIS:Name="Name">Load_Prospects_Dictionaries</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">27</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{25DDB84A-91A2-4F1A-84B1-FEF616DCE164}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{28B14DAF-AB32-46F9-9814-D365CE6C3B9D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Prospects.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.Prospects DB conn.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -1042,7 +1040,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Prospects.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.Prospects DB conn.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -1057,7 +1055,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Prospects.Password">
+                <SSIS:Parameter SSIS:Name="CM.Prospects DB conn.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -1071,7 +1069,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Prospects.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.Prospects DB conn.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -1086,7 +1084,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Prospects.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.Prospects DB conn.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -1101,7 +1099,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Prospects.UserName">
+                <SSIS:Parameter SSIS:Name="CM.Prospects DB conn.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>

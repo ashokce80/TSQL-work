@@ -15,8 +15,8 @@
   DTS:ObjectName="Testing"
   DTS:PackageType="5"
   DTS:SaveCheckpoints="True"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{A173D73E-D79C-4585-967A-6F8AEB2594D6}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{E94AA7EE-8445-45C1-943C-8DD16EB4E69F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -574,7 +574,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -594,7 +594,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -619,6 +619,19 @@
           SQLTask:Connection="{99F41482-8B25-459D-A7CA-4DDFB17D68C6}"
           SQLTask:SqlStatementSource="Insert into AAA values('Hiii')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Send Mail Task"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{F3017592-F0A0-408A-AB91-2AE6057B8158}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Send Mail Task"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData />
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
@@ -729,6 +742,10 @@
           Id="Package\Data Flow Task"
           TopLeft="64.5714296710735,137.647060753977" />
         <NodeLayout
+          Size="160,41.6"
+          Id="Package\Data Flow Task 1"
+          TopLeft="461.714293577233,67.9529418714319" />
+        <NodeLayout
           Size="182.4,41.6"
           Id="Package\Execute Package Task"
           TopLeft="51.4285723043947,308.941180803372" />
@@ -818,9 +835,9 @@
           Id="635aae4f-face-47ce-a4bd-28bbef1c0e62"
           TopLeft="233.714289694416,320.941180949228" />
         <NodeLayout
-          Size="160,41.6"
-          Id="Package\Data Flow Task 1"
-          TopLeft="461.714293577233,67.9529418714319" />
+          Size="148.8,41.6"
+          Id="Package\Send Mail Task"
+          TopLeft="512.571437300468,187.200002625409" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

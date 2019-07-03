@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Prospects_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{B0112486-831E-4892-A247-6D2664AA5FA1}">
+  DTS:VersionBuild="100"
+  DTS:VersionGUID="{9334F1CE-7C3B-41DE-80DF-CF8F1BDD0BE4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,7 +26,7 @@
         DTS:Name="ExcelFilePath">@[User::File_Path]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -167,7 +167,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FileNewName">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B_2019-07-01_112703.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B_2019-07-02_180148.xls</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -187,7 +187,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="File_Path">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\Exces\prospect_B.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B.xls</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
