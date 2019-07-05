@@ -12,7 +12,7 @@
   DTS:ObjectName="Load_Prospects_Staging"
   DTS:PackageType="5"
   DTS:VersionBuild="100"
-  DTS:VersionGUID="{9334F1CE-7C3B-41DE-80DF-CF8F1BDD0BE4}">
+  DTS:VersionGUID="{6A82DEFF-8913-4987-B352-77DCC6AF1FBB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -167,7 +167,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FileNewName">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B_2019-07-02_180148.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\Data Analytics Sections\SSIS\ExcelFiles\prospect_B_2019-07-03_123946.xls</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1764,7 +1764,7 @@
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -1917,13 +1917,13 @@
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_stg_Prospects]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[tbl_stg_Prospects]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_stg_Prospects]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[tbl_stg_Prospects]) [refTable]
 where [refTable].[Name] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -2102,7 +2102,7 @@ where [refTable].[Name] = ?</property>
                       description="The SQL command to be executed."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Update tbl_stg_Prospects
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Update tbl_stg_Prospects
 set	Title = ?,
 	Company = ?,
 	Location = ?,
@@ -2407,7 +2407,7 @@ Where	Name = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2580,7 +2580,7 @@ Where	Name = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3162,19 +3162,10 @@ Where	Name = ?</property>
           <DTS:ObjectData>
             <ScriptProject
               Name="ST_7bbda392a28b42e4b1442170f2e3b65d"
-              VSTAMajorVersion="15"
+              VSTAMajorVersion="14"
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadWriteVariables="User::ErrorCount,User::File_Name,User::SuccessCount">
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -3295,6 +3286,35 @@ Where	Name = ?</property>
   </resheader>
 </root>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_7bbda392a28b42e4b1442170f2e3b65d.Properties.Settings.get_Default():ST_7bbda392a28b42e4b1442170f2e3b65d.Properties.Sett" +
+    "ings")]
+
+namespace ST_7bbda392a28b42e4b1442170f2e3b65d.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="ST_7bbda392a28b42e4b1442170f2e3b65d.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -3338,8 +3358,8 @@ Where	Name = ?</property>
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
@@ -3506,50 +3526,21 @@ namespace ST_7bbda392a28b42e4b1442170f2e3b65d
                 Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:CodeName>ST_7bbda392a28b42e4b1442170f2e3b65d</msb:CodeName>
 		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_7bbda392a28b42e4b1442170f2e3b65d</msb:CodeName>
 		<msb:DisplayName>ST_7bbda392a28b42e4b1442170f2e3b65d</msb:DisplayName>
 		<msb:ProjectId>{F1A3886E-316A-4042-BA08-905D198782A3}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="ST_7bbda392a28b42e4b1442170f2e3b65d.csproj"/>
-		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
 		<msb:File Include="Properties\Settings.Designer.cs"/>
 		<msb:File Include="ScriptMain.cs"/>
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_7bbda392a28b42e4b1442170f2e3b65d.Properties.Settings.get_Default():ST_7bbda392a28b42e4b1442170f2e3b65d.Properties.Sett" +
-    "ings")]
-
-namespace ST_7bbda392a28b42e4b1442170f2e3b65d.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
@@ -3580,6 +3571,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -3651,7 +3651,7 @@ namespace ST_7bbda392a28b42e4b1442170f2e3b65d.Properties {
               <BinaryItem
                 Name="ST_7bbda392a28b42e4b1442170f2e3b65d.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAFZYGV0AAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAAHi8A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGXoHF0AAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAAHi8A
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAMwuAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -3681,8 +3681,8 @@ JQQVALkAJQQGAHEAKwUhAMEA9wQmAMkAnQMrANEA0gIxAIkA/AI1ANkAQQU5AOEAdwU/AMEAaAUB
 AHEAJQQGAIkAJQQGAPEAiQBFAPEAhwVMAJEAJQRSALEAJQQGAAgAFABsAAgAGABxACkAcwDZAC4A
 CwCxAC4AEwC6AC4AGwDZAC4AIwDiAC4AKwALAS4AMwALAS4AOwALAS4AQwDiAC4ASwARAS4AUwAL
 AS4AWwAoAUMAYwBxAEkAcwDZAGEAewBxAGMAawBxABsAAwABAAQAAwAAABUEogAAAOgApwAAAFMF
-rAACAAQAAwACAAUABQABAAYABQACAAcABwAEgAAAAQAAANAbQ4sAAAAAAAA6AAAABAAAAAAAAAAA
-AAAAWgAxAAAAAAAOAAAAAAAAAAAAAABjAAUDAAAAAAQAAAAAAAAAAAAAAFoApgMAAAAADgAAAAAA
+rAACAAQAAwACAAUABQABAAYABQACAAcABwAEgAAAAQAAANMbClkAAAAAAAA6AAAABAAAAAAAAAAA
+AAAAWgAxAAAAAAANAAAAAAAAAAAAAABjAAUDAAAAAAQAAAAAAAAAAAAAAFoApgMAAAAADQAAAAAA
 AAAAAAAAYwAKAAAAAAAEAAAAAAAAAAAAAABaAA4FAAAAAAAAAAABAAAAdgQAAAUAAgAAAAAAADxN
 b2R1bGU+AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuTWFuYWdlZERUUwB2YWx1ZV9fAG1zY29ybGliAFNU
 XzdiYmRhMzkyYTI4YjQyZTRiMTQ0MjE3MGYyZTNiNjVkAGRlZmF1bHRJbnN0YW5jZQBWYXJpYWJs
@@ -3714,7 +3714,7 @@ AHMAQwBvAHUAbgB0AAAhVQBzAGUAcgA6ADoARQByAHIAbwByAEMAbwB1AG4AdAAAC1kAbwB1AHIA
 IAAACyAAaABhAHMAIAAAIyAAZwBvAG8AZAAgAHIAZQBjAG8AcgBkACAAYQBuAGQAIAAAGSAAYgBh
 AGQAIAByAGUAYwBvAHIAZAAuAABxUwBUAF8ANwBiAGIAZABhADMAOQAyAGEAMgA4AGIANAAyAGUA
 NABiADEANAA0ADIAMQA3ADAAZgAyAGUAMwBiADYANQBkAC4AUAByAG8AcABlAHIAdABpAGUAcwAu
-AFIAZQBzAG8AdQByAGMAZQBzAAAAAABFdtZSEuF+Q56XAKDbB10/AAQgAQEIAyAAAQUgAQEREQQg
+AFIAZQBzAG8AdQByAGMAZQBzAAAAAAC/j92z3vNSRr3fhkmeJZysAAQgAQEIAyAAAQUgAQEREQQg
 AQEOBSABARFRBQcDDg4OBCAAEmEEIAASZQUgARJpHAMgABwDIAAOBQABDh0OBQABEXUOBgABEnkR
 fQUgABKAgQcgAgEOEoCBCLd6XFYZNOCJCImEXc2AgMyRBAAAAAAEAQAAAAMGEkkDBhJNAwYSEAIG
 CAMGERQEAAASSQQAABJNBQABARJNBAAAEhADAAABBAgAEkkECAASTQQIABIQCAEACAAAAAAAHgEA
@@ -3732,14 +3732,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAA
 AABIAAAAWEAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
-AAAAAAC9BO/+AAABAAAAAQBDi9AbAAABAEOL0Bs/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
+AAAAAAC9BO/+AAABAAAAAQAKWdMbAAABAApZ0xs/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
 RAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBv
 AG4AAAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABWAwAAAQAwADAA
 MAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABh
 AG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4A
 AAAAAFMAVABfADcAYgBiAGQAYQAzADkAMgBhADIAOABiADQAMgBlADQAYgAxADQANAAyADEANwAw
 AGYAMgBlADMAYgA2ADUAZAAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAA
-LgA3ADEAMgAwAC4AMwA1ADYANQAxAAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
+LgA3ADEAMgAzAC4AMgAyADcAOQA0AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
 AFMAVABfADcAYgBiAGQAYQAzADkAMgBhADIAOABiADQAMgBlADQAYgAxADQANAAyADEANwAwAGYA
 MgBlADMAYgA2ADUAZAAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0
 AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMQA5AAAAKgABAAEATABlAGcAYQBsAFQA
@@ -3748,8 +3748,8 @@ AGEAbQBlAAAAUwBUAF8ANwBiAGIAZABhADMAOQAyAGEAMgA4AGIANAAyAGUANABiADEANAA0ADIA
 MQA3ADAAZgAyAGUAMwBiADYANQBkAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBt
 AGUAAAAAAFMAVABfADcAYgBiAGQAYQAzADkAMgBhADIAOABiADQAMgBlADQAYgAxADQANAAyADEA
 NwAwAGYAMgBlADMAYgA2ADUAZAAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAA
-ADEALgAwAC4ANwAxADIAMAAuADMANQA2ADUAMQAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
-VgBlAHIAcwBpAG8AbgAAADEALgAwAC4ANwAxADIAMAAuADMANQA2ADUAMQAAAAAAAAAAAAAAAAAA
+ADEALgAwAC4ANwAxADIAMwAuADIAMgA3ADkANAAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4ANwAxADIAMwAuADIAMgA3ADkANAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

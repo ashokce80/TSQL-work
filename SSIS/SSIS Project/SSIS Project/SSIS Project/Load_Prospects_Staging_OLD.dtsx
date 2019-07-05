@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/13/2019 5:33:49 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="Load_Prospects_Staging_OLD"
   DTS:PackageType="5"
   DTS:VersionBuild="20"
-  DTS:VersionGUID="{FC3663CA-E915-47FD-956E-7A1EAF453900}">
+  DTS:VersionGUID="{06612DDF-7752-4CD0-A47C-30182E7A19BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
